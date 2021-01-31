@@ -22,18 +22,6 @@
             <column name="bssoeorderid" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="coanakreaction" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="credentialsrequested" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="delegatedipv_6_prefix" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="delegatedipv_6_prefixlength" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="dnsprofile" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
@@ -41,27 +29,6 @@
                 <constraints nullable="true" />
             </column>
             <column name="fon_aktiv" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="framedipv_6_prefix" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="framedipv_6_prefixlength" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="ha_msisdn" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="influencesession" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="iptv_enabled" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="ipv_4_address" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="ipv_4_netmask" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="ipversion" type="varchar(255)">
@@ -85,25 +52,10 @@
             <column name="profileid" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="profilset" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="recht_auf_feste_ipadresse" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="reserveprefix" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="teilnehmersperre" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="terminationprofile" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="to_nr" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="tunnelprofile" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="umt_service_data_ocssubscriptionid" type="varchar(255)">
@@ -122,9 +74,6 @@
                 <constraints nullable="true" />
             </column>
             <column name="userauthenticationrequired" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="voip_is_present" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <!-- jhipster-needle-liquibase-add-column - JHipster will add columns here -->
@@ -152,20 +101,9 @@
             <column name="id" type="numeric"/>
             <column name="anschlussbilanzierung" type="string"/>
             <column name="bssoeorderid" type="string"/>
-            <column name="coanakreaction" type="string"/>
-            <column name="credentialsrequested" type="string"/>
-            <column name="delegatedipv_6_prefix" type="string"/>
-            <column name="delegatedipv_6_prefixlength" type="string"/>
             <column name="dnsprofile" type="string"/>
             <column name="filterid" type="string"/>
             <column name="fon_aktiv" type="string"/>
-            <column name="framedipv_6_prefix" type="string"/>
-            <column name="framedipv_6_prefixlength" type="string"/>
-            <column name="ha_msisdn" type="string"/>
-            <column name="influencesession" type="string"/>
-            <column name="iptv_enabled" type="string"/>
-            <column name="ipv_4_address" type="string"/>
-            <column name="ipv_4_netmask" type="string"/>
             <column name="ipversion" type="string"/>
             <column name="lineid" type="string"/>
             <column name="maxdownspeed" type="string"/>
@@ -173,20 +111,14 @@
             <column name="maxupspeed" type="string"/>
             <column name="mehrfachzugang" type="string"/>
             <column name="profileid" type="string"/>
-            <column name="profilset" type="string"/>
             <column name="recht_auf_feste_ipadresse" type="string"/>
-            <column name="reserveprefix" type="string"/>
-            <column name="teilnehmersperre" type="string"/>
-            <column name="terminationprofile" type="string"/>
             <column name="to_nr" type="string"/>
-            <column name="tunnelprofile" type="string"/>
             <column name="umt_service_data_ocssubscriptionid" type="string"/>
             <column name="umt_service_data_throttledownl_3" type="string"/>
             <column name="umt_service_data_throttleprofile" type="string"/>
             <column name="umt_service_data_throttleupl_3" type="string"/>
             <column name="usecase" type="string"/>
             <column name="userauthenticationrequired" type="string"/>
-            <column name="voip_is_present" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>
     </changeSet>

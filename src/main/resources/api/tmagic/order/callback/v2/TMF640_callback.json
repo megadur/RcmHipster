@@ -1,0 +1,299 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "description": "",
+    "version": "2.0.0",
+    "title": "API Activation and Configuration"
+  },
+  "host": "env-0693795.jelastic.servint.net",
+  "basePath": "/DSEntityProvisioning/api/ActivationAndConfiguration/v2",
+  "schemes": ["http"],
+  "consumes": ["application/json"],
+  "produces": ["application/json"],
+  "paths": {
+    "/service/{serviceId}": {
+      "post": {
+        "tags": ["Service"],
+        "operationId": "serviceCreate",
+        "summary": "serviceCreate",
+        "description": "",
+        "deprecated": false,
+        "parameters": [
+          {
+            "name": "Callback",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Callback"
+            }
+          },
+          {
+            "name": "serviceId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "X-Callback-Response-Id",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "X-Callback-Correlation-Id",
+            "in": "header",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "$ref": "#/definitions/Service"
+            }
+          },
+          "202": {
+            "description": "Accepted",
+            "schema": {
+              "$ref": "#/definitions/Service"
+            }
+          },
+          "500": {
+            "description": "Internal Error",
+            "schema": {
+              "$ref": "#/definitions/Service"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "stateValues": {
+      "description": "",
+      "type": "string",
+      "enum": ["feasibility_checked", "designed", "reserved", "inactive", "active", "terminated"]
+    },
+    "Service": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Unique identifier of the service",
+          "type": "string"
+        },
+        "href": {
+          "description": "Reference of the service",
+          "type": "string"
+        },
+        "name": {
+          "description": "Name of the service",
+          "type": "string"
+        },
+        "description": {
+          "description": "Service for createCredentials and activateIPAccess of RCM.",
+          "type": "string"
+        },
+        "@type": {
+          "description": "Service type",
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "state": {
+          "$ref": "#/definitions/stateValues"
+        },
+        "serviceSpecification": {
+          "$ref": "#/definitions/ServiceSpecification"
+        },
+        "characteristic": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServiceCharacteristic"
+          }
+        },
+        "serviceRelationship": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/ServiceRelationship"
+          }
+        },
+        "relatedParty": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/RelatedParty"
+          }
+        },
+        "supportingService": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SupportingService"
+          }
+        },
+        "supportingResource": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/SupportingResource"
+          }
+        }
+      }
+    },
+    "ServiceSpecification": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        }
+      }
+    },
+    "SupportingResource": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        }
+      }
+    },
+    "SupportingService": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        }
+      }
+    },
+    "ServiceRelationship": {
+      "description": "Describes services to rely on.",
+      "required": ["type", "service"],
+      "type": "object",
+      "properties": {
+        "type": {
+          "type": "string"
+        },
+        "service": {
+          "$ref": "#/definitions/ServiceRef"
+        }
+      }
+    },
+    "ServiceRef": {
+      "description": "Service reference. Useful to link services of the same category",
+      "required": ["id"],
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "Unique identifier of the service",
+          "type": "string"
+        },
+        "href": {
+          "description": "Reference of the service",
+          "type": "string"
+        }
+      }
+    },
+    "ServiceCharacteristic": {
+      "description": "A list of name value pairs that define the service characteristics",
+      "required": ["name"],
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "Name of the characteristic",
+          "type": "string"
+        },
+        "valueType": {
+          "description": "",
+          "type": "string"
+        },
+        "value": {
+          "$ref": "#/definitions/Value"
+        }
+      }
+    },
+    "RelatedParty": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "role": {
+          "type": "string"
+        },
+        "href": {
+          "type": "string"
+        }
+      }
+    },
+    "Value": {
+      "description": "Structure used to describe characteristic value",
+      "type": "object",
+      "properties": {
+        "@type": {
+          "description": "",
+          "type": "string"
+        },
+        "@schemaLocation": {
+          "description": "",
+          "type": "string"
+        },
+        "value": {
+          "description": "actual characteristcs value - attention: deviation from TMF",
+          "type": "string"
+        }
+      }
+    },
+    "Callback": {
+      "description": "Container for callback information",
+      "required": ["callbackStatus"],
+      "type": "object",
+      "properties": {
+        "callbackStatus": {
+          "$ref": "#/definitions/CallbackStatus"
+        },
+        "service": {
+          "description": "",
+          "$ref": "#/definitions/Service"
+        }
+      }
+    },
+    "CallbackStatus": {
+      "description": "Structure used to describe status information",
+      "type": "object",
+      "required": ["code"],
+      "properties": {
+        "code": {
+          "$ref": "#/definitions/CallbackCode"
+        },
+        "reason": {
+          "description": "'Fehlerbildnummer': and textual error description",
+          "type": "string",
+          "example": "8001900101234567: 0006 Update schlug fehl. Adressierter Datensatz existiert nicht"
+        }
+      }
+    },
+    "CallbackCode": {
+      "description": "\n All business errors will transmit the actual error code and description as reason\n\nRCM_VALIDATION_ERROR:\t At least one of the order parameters have an invalid structure\nRCM_IDMA_CREDENTIALS_CREATE:\t business error during IDM-A createCredentials\nRCM_IDMA_CREDENTIALS_GET:\t business error during IDM-A getCredentials\nRCM_IDMA_INVENTORY_CREATE:\t business error during IDM-A createInventory\nRCM_RDQ_SUBSCRIBER_CREATE:\t business error during RDQ createSubscriber\nRCM_RDQ_SUBSCRIBER_UPDATE:\t business error during RDQ updateSubscriber\nRCM_RDQ_SUBSCRIBER_QUERY:\t business error during RDQ querySubscriber\nRCM_PARTNER_UNAVAIBLE:\t  technicalm error during interface call, find system name in description\nRCM_OK:\t regular processing response",
+      "type": "string",
+      "enum": [
+        "RCM_VALIDATION_ERROR",
+        "RCM_IDMA_CREDENTIALS_CREATE",
+        "RCM_IDMA_CREDENTIALS_GET",
+        "RCM_IDMA_INVENTORY_CREATE",
+        "RCM_RDQ_SUBSCRIBER_CREATE",
+        "RCM_RDQ_SUBSCRIBER_UPDATE",
+        "RCM_RDQ_SUBSCRIBER_QUERY",
+        "RCM_PARTNER_UNAVAILABLE",
+        "RCM_UNEXPECTED_ERROR",
+        "RCM_OK"
+      ]
+    }
+  }
+}

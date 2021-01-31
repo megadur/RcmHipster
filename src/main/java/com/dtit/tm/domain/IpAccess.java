@@ -24,18 +24,6 @@ public class IpAccess implements Serializable {
     @Column(name = "bssoeorderid")
     private String bssoeorderid;
 
-    @Column(name = "coanakreaction")
-    private String coanakreaction;
-
-    @Column(name = "credentialsrequested")
-    private String credentialsrequested;
-
-    @Column(name = "delegatedipv_6_prefix")
-    private String delegatedipv6prefix;
-
-    @Column(name = "delegatedipv_6_prefixlength")
-    private String delegatedipv6prefixlength;
-
     @Column(name = "dnsprofile")
     private String dnsprofile;
 
@@ -44,27 +32,6 @@ public class IpAccess implements Serializable {
 
     @Column(name = "fon_aktiv")
     private String fonAktiv;
-
-    @Column(name = "framedipv_6_prefix")
-    private String framedipv6prefix;
-
-    @Column(name = "framedipv_6_prefixlength")
-    private String framedipv6prefixlength;
-
-    @Column(name = "ha_msisdn")
-    private String haMSISDN;
-
-    @Column(name = "influencesession")
-    private String influencesession;
-
-    @Column(name = "iptv_enabled")
-    private String iptvEnabled;
-
-    @Column(name = "ipv_4_address")
-    private String ipv4address;
-
-    @Column(name = "ipv_4_netmask")
-    private String ipv4netmask;
 
     @Column(name = "ipversion")
     private String ipversion;
@@ -87,26 +54,11 @@ public class IpAccess implements Serializable {
     @Column(name = "profileid")
     private String profileid;
 
-    @Column(name = "profilset")
-    private String profilset;
-
     @Column(name = "recht_auf_feste_ipadresse")
     private String rechtAufFesteIpadresse;
 
-    @Column(name = "reserveprefix")
-    private String reserveprefix;
-
-    @Column(name = "teilnehmersperre")
-    private String teilnehmersperre;
-
-    @Column(name = "terminationprofile")
-    private String terminationprofile;
-
     @Column(name = "to_nr")
     private String toNr;
-
-    @Column(name = "tunnelprofile")
-    private String tunnelprofile;
 
     @Column(name = "umt_service_data_ocssubscriptionid")
     private String umtServiceDataOcssubscriptionid;
@@ -125,9 +77,6 @@ public class IpAccess implements Serializable {
 
     @Column(name = "userauthenticationrequired")
     private String userauthenticationrequired;
-
-    @Column(name = "voip_is_present")
-    private String voipIsPresent;
 
     // jhipster-needle-entity-add-field - JHipster will add fields here
     public Long getId() {
@@ -162,58 +111,6 @@ public class IpAccess implements Serializable {
 
     public void setBssoeorderid(String bssoeorderid) {
         this.bssoeorderid = bssoeorderid;
-    }
-
-    public String getCoanakreaction() {
-        return coanakreaction;
-    }
-
-    public IpAccess coanakreaction(String coanakreaction) {
-        this.coanakreaction = coanakreaction;
-        return this;
-    }
-
-    public void setCoanakreaction(String coanakreaction) {
-        this.coanakreaction = coanakreaction;
-    }
-
-    public String getCredentialsrequested() {
-        return credentialsrequested;
-    }
-
-    public IpAccess credentialsrequested(String credentialsrequested) {
-        this.credentialsrequested = credentialsrequested;
-        return this;
-    }
-
-    public void setCredentialsrequested(String credentialsrequested) {
-        this.credentialsrequested = credentialsrequested;
-    }
-
-    public String getDelegatedipv6prefix() {
-        return delegatedipv6prefix;
-    }
-
-    public IpAccess delegatedipv6prefix(String delegatedipv6prefix) {
-        this.delegatedipv6prefix = delegatedipv6prefix;
-        return this;
-    }
-
-    public void setDelegatedipv6prefix(String delegatedipv6prefix) {
-        this.delegatedipv6prefix = delegatedipv6prefix;
-    }
-
-    public String getDelegatedipv6prefixlength() {
-        return delegatedipv6prefixlength;
-    }
-
-    public IpAccess delegatedipv6prefixlength(String delegatedipv6prefixlength) {
-        this.delegatedipv6prefixlength = delegatedipv6prefixlength;
-        return this;
-    }
-
-    public void setDelegatedipv6prefixlength(String delegatedipv6prefixlength) {
-        this.delegatedipv6prefixlength = delegatedipv6prefixlength;
     }
 
     public String getDnsprofile() {
@@ -253,97 +150,6 @@ public class IpAccess implements Serializable {
 
     public void setFonAktiv(String fonAktiv) {
         this.fonAktiv = fonAktiv;
-    }
-
-    public String getFramedipv6prefix() {
-        return framedipv6prefix;
-    }
-
-    public IpAccess framedipv6prefix(String framedipv6prefix) {
-        this.framedipv6prefix = framedipv6prefix;
-        return this;
-    }
-
-    public void setFramedipv6prefix(String framedipv6prefix) {
-        this.framedipv6prefix = framedipv6prefix;
-    }
-
-    public String getFramedipv6prefixlength() {
-        return framedipv6prefixlength;
-    }
-
-    public IpAccess framedipv6prefixlength(String framedipv6prefixlength) {
-        this.framedipv6prefixlength = framedipv6prefixlength;
-        return this;
-    }
-
-    public void setFramedipv6prefixlength(String framedipv6prefixlength) {
-        this.framedipv6prefixlength = framedipv6prefixlength;
-    }
-
-    public String getHaMSISDN() {
-        return haMSISDN;
-    }
-
-    public IpAccess haMSISDN(String haMSISDN) {
-        this.haMSISDN = haMSISDN;
-        return this;
-    }
-
-    public void setHaMSISDN(String haMSISDN) {
-        this.haMSISDN = haMSISDN;
-    }
-
-    public String getInfluencesession() {
-        return influencesession;
-    }
-
-    public IpAccess influencesession(String influencesession) {
-        this.influencesession = influencesession;
-        return this;
-    }
-
-    public void setInfluencesession(String influencesession) {
-        this.influencesession = influencesession;
-    }
-
-    public String getIptvEnabled() {
-        return iptvEnabled;
-    }
-
-    public IpAccess iptvEnabled(String iptvEnabled) {
-        this.iptvEnabled = iptvEnabled;
-        return this;
-    }
-
-    public void setIptvEnabled(String iptvEnabled) {
-        this.iptvEnabled = iptvEnabled;
-    }
-
-    public String getIpv4address() {
-        return ipv4address;
-    }
-
-    public IpAccess ipv4address(String ipv4address) {
-        this.ipv4address = ipv4address;
-        return this;
-    }
-
-    public void setIpv4address(String ipv4address) {
-        this.ipv4address = ipv4address;
-    }
-
-    public String getIpv4netmask() {
-        return ipv4netmask;
-    }
-
-    public IpAccess ipv4netmask(String ipv4netmask) {
-        this.ipv4netmask = ipv4netmask;
-        return this;
-    }
-
-    public void setIpv4netmask(String ipv4netmask) {
-        this.ipv4netmask = ipv4netmask;
     }
 
     public String getIpversion() {
@@ -437,19 +243,6 @@ public class IpAccess implements Serializable {
         this.profileid = profileid;
     }
 
-    public String getProfilset() {
-        return profilset;
-    }
-
-    public IpAccess profilset(String profilset) {
-        this.profilset = profilset;
-        return this;
-    }
-
-    public void setProfilset(String profilset) {
-        this.profilset = profilset;
-    }
-
     public String getRechtAufFesteIpadresse() {
         return rechtAufFesteIpadresse;
     }
@@ -463,45 +256,6 @@ public class IpAccess implements Serializable {
         this.rechtAufFesteIpadresse = rechtAufFesteIpadresse;
     }
 
-    public String getReserveprefix() {
-        return reserveprefix;
-    }
-
-    public IpAccess reserveprefix(String reserveprefix) {
-        this.reserveprefix = reserveprefix;
-        return this;
-    }
-
-    public void setReserveprefix(String reserveprefix) {
-        this.reserveprefix = reserveprefix;
-    }
-
-    public String getTeilnehmersperre() {
-        return teilnehmersperre;
-    }
-
-    public IpAccess teilnehmersperre(String teilnehmersperre) {
-        this.teilnehmersperre = teilnehmersperre;
-        return this;
-    }
-
-    public void setTeilnehmersperre(String teilnehmersperre) {
-        this.teilnehmersperre = teilnehmersperre;
-    }
-
-    public String getTerminationprofile() {
-        return terminationprofile;
-    }
-
-    public IpAccess terminationprofile(String terminationprofile) {
-        this.terminationprofile = terminationprofile;
-        return this;
-    }
-
-    public void setTerminationprofile(String terminationprofile) {
-        this.terminationprofile = terminationprofile;
-    }
-
     public String getToNr() {
         return toNr;
     }
@@ -513,19 +267,6 @@ public class IpAccess implements Serializable {
 
     public void setToNr(String toNr) {
         this.toNr = toNr;
-    }
-
-    public String getTunnelprofile() {
-        return tunnelprofile;
-    }
-
-    public IpAccess tunnelprofile(String tunnelprofile) {
-        this.tunnelprofile = tunnelprofile;
-        return this;
-    }
-
-    public void setTunnelprofile(String tunnelprofile) {
-        this.tunnelprofile = tunnelprofile;
     }
 
     public String getUmtServiceDataOcssubscriptionid() {
@@ -605,19 +346,6 @@ public class IpAccess implements Serializable {
     public void setUserauthenticationrequired(String userauthenticationrequired) {
         this.userauthenticationrequired = userauthenticationrequired;
     }
-
-    public String getVoipIsPresent() {
-        return voipIsPresent;
-    }
-
-    public IpAccess voipIsPresent(String voipIsPresent) {
-        this.voipIsPresent = voipIsPresent;
-        return this;
-    }
-
-    public void setVoipIsPresent(String voipIsPresent) {
-        this.voipIsPresent = voipIsPresent;
-    }
     // jhipster-needle-entity-add-getters-setters - JHipster will add getters and setters here
 
     @Override
@@ -643,20 +371,9 @@ public class IpAccess implements Serializable {
             "id=" + getId() +
             ", anschlussbilanzierung='" + getAnschlussbilanzierung() + "'" +
             ", bssoeorderid='" + getBssoeorderid() + "'" +
-            ", coanakreaction='" + getCoanakreaction() + "'" +
-            ", credentialsrequested='" + getCredentialsrequested() + "'" +
-            ", delegatedipv6prefix='" + getDelegatedipv6prefix() + "'" +
-            ", delegatedipv6prefixlength='" + getDelegatedipv6prefixlength() + "'" +
             ", dnsprofile='" + getDnsprofile() + "'" +
             ", filterid='" + getFilterid() + "'" +
             ", fonAktiv='" + getFonAktiv() + "'" +
-            ", framedipv6prefix='" + getFramedipv6prefix() + "'" +
-            ", framedipv6prefixlength='" + getFramedipv6prefixlength() + "'" +
-            ", haMSISDN='" + getHaMSISDN() + "'" +
-            ", influencesession='" + getInfluencesession() + "'" +
-            ", iptvEnabled='" + getIptvEnabled() + "'" +
-            ", ipv4address='" + getIpv4address() + "'" +
-            ", ipv4netmask='" + getIpv4netmask() + "'" +
             ", ipversion='" + getIpversion() + "'" +
             ", lineid='" + getLineid() + "'" +
             ", maxdownspeed='" + getMaxdownspeed() + "'" +
@@ -664,20 +381,14 @@ public class IpAccess implements Serializable {
             ", maxupspeed='" + getMaxupspeed() + "'" +
             ", mehrfachzugang='" + getMehrfachzugang() + "'" +
             ", profileid='" + getProfileid() + "'" +
-            ", profilset='" + getProfilset() + "'" +
             ", rechtAufFesteIpadresse='" + getRechtAufFesteIpadresse() + "'" +
-            ", reserveprefix='" + getReserveprefix() + "'" +
-            ", teilnehmersperre='" + getTeilnehmersperre() + "'" +
-            ", terminationprofile='" + getTerminationprofile() + "'" +
             ", toNr='" + getToNr() + "'" +
-            ", tunnelprofile='" + getTunnelprofile() + "'" +
             ", umtServiceDataOcssubscriptionid='" + getUmtServiceDataOcssubscriptionid() + "'" +
             ", umtServiceDataThrottledownl3='" + getUmtServiceDataThrottledownl3() + "'" +
             ", umtServiceDataThrottleprofile='" + getUmtServiceDataThrottleprofile() + "'" +
             ", umtServiceDataThrottleupl3='" + getUmtServiceDataThrottleupl3() + "'" +
             ", usecase='" + getUsecase() + "'" +
             ", userauthenticationrequired='" + getUserauthenticationrequired() + "'" +
-            ", voipIsPresent='" + getVoipIsPresent() + "'" +
             "}";
     }
 }

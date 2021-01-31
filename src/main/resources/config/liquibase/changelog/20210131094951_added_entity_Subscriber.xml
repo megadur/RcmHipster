@@ -22,12 +22,6 @@
             <column name="calid" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="dlgipv_6_prefix" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="dlgipv_6_prefixlen" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="dns_profile" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
@@ -38,21 +32,6 @@
                 <constraints nullable="true" />
             </column>
             <column name="errorvalue" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="filterid" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="frmdipv_6_prefix" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="frmdipv_6_prefixlen" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="ipaddress" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="ipnetmask" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="ipversion" type="varchar(255)">
@@ -71,9 +50,6 @@
                 <constraints nullable="true" />
             </column>
             <column name="mfzg" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="msisdn" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="netprofileid" type="varchar(255)">
@@ -103,9 +79,6 @@
             <column name="request_id" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
-            <column name="reserveprefix" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
             <column name="returnmessage" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
@@ -116,12 +89,6 @@
                 <constraints nullable="true" />
             </column>
             <column name="tlnsps" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="tunnel_profile" type="varchar(255)">
-                <constraints nullable="true" />
-            </column>
-            <column name="umt_service_data" type="varchar(255)">
                 <constraints nullable="true" />
             </column>
             <column name="user_auth_required" type="varchar(255)">
@@ -152,24 +119,16 @@
             <column name="id" type="numeric"/>
             <column name="asskeng" type="string"/>
             <column name="calid" type="string"/>
-            <column name="dlgipv_6_prefix" type="string"/>
-            <column name="dlgipv_6_prefixlen" type="string"/>
             <column name="dns_profile" type="string"/>
             <column name="errorelement" type="string"/>
             <column name="errormessage" type="string"/>
             <column name="errorvalue" type="string"/>
-            <column name="filterid" type="string"/>
-            <column name="frmdipv_6_prefix" type="string"/>
-            <column name="frmdipv_6_prefixlen" type="string"/>
-            <column name="ipaddress" type="string"/>
-            <column name="ipnetmask" type="string"/>
             <column name="ipversion" type="string"/>
             <column name="keyid" type="string"/>
             <column name="max_down_l_3" type="string"/>
             <column name="max_session_duration" type="string"/>
             <column name="max_up_l_3" type="string"/>
             <column name="mfzg" type="string"/>
-            <column name="msisdn" type="string"/>
             <column name="netprofileid" type="string"/>
             <column name="origin" type="string"/>
             <column name="passwort" type="string"/>
@@ -179,13 +138,10 @@
             <column name="rc" type="string"/>
             <column name="rectime" type="string"/>
             <column name="request_id" type="string"/>
-            <column name="reserveprefix" type="string"/>
             <column name="returnmessage" type="string"/>
             <column name="rsptime" type="string"/>
             <column name="tlnnr" type="string"/>
             <column name="tlnsps" type="string"/>
-            <column name="tunnel_profile" type="string"/>
-            <column name="umt_service_data" type="string"/>
             <column name="user_auth_required" type="string"/>
             <!-- jhipster-needle-liquibase-add-loadcolumn - JHipster (and/or extensions) can add load columns here -->
         </loadData>

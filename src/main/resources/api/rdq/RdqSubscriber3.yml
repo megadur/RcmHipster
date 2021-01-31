@@ -1,0 +1,267 @@
+openapi: '3.0.2'
+info:
+  title: API RDQ_IN
+  version: '1.0'
+servers:
+  - url: https://api.server.test/v1
+
+components:
+  parameters:
+    name:
+      name: name
+      in: query
+      required: true
+      description: x
+      schema:
+        type: string
+    xApp:
+      name: xApp
+      in: query
+      required: true
+      description: leer
+      schema:
+        type: string
+  schemas:
+    Subscriber:
+      type: object
+      properties:
+        requestID:
+          type: integer
+          format: int64
+        origin:
+          type: string
+        netprofileid:
+          type: string
+        tlnnr:
+          type: string
+        asskeng:
+          type: string
+        calid:
+          type: string
+        userAuthRequired:
+          type: string
+        passwort:
+          type: string
+        passwortEnc:
+          type: string
+        keyid:
+          type: string
+        mfzg:
+          type: string
+        tlnsps:
+          type: string
+        profilset:
+          type: string
+        tunnelProfile:
+          type: string
+        dnsProfile:
+          type: string
+        filterid:
+          type: string
+        policyGroup:
+          type: string
+        maxUpL3:
+          type: string
+        maxDownL3:
+          type: string
+        maxSessionDuration:
+          type: string
+        ipversion:
+          type: string
+        ipaddress:
+          type: string
+        ipnetmask:
+          type: string
+        reserveprefix:
+          type: string
+        frmdipv6Prefix:
+          type: string
+        frmdipv6Prefixlen:
+          type: string
+        dlgipv6Prefix:
+          type: string
+        dlgipv6Prefixlen:
+          type: string
+        umtServiceData:
+          type: string
+        msisdn:
+          type: string
+
+paths:
+  /subscriber:
+    get:
+      tags:
+        - subscriber
+      summary: Find subscriber by ID
+      description: Returns a single subscriber
+      operationId: getSubscriberById
+      parameters:
+        - name: subscriberId
+          in: path
+          description: ID of subscriber to return
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/xml:
+              schema:
+                $ref: '#/components/schemas/Subscriber'
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Subscriber'
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Subscriber not found
+          content: {}
+      security:
+        - api_key: []
+    put:
+      tags:
+        - subscriber
+      summary: Update an existing Subscriber
+      operationId: updateSubscriber
+      requestBody:
+        description: Subscriber object that needs to be added to the RDQ_IN
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Subscriber'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Subscriber'
+        required: true
+      responses:
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: Subscriber not found
+          content: {}
+        405:
+          description: Validation exception
+          content: {}
+      security:
+        - petstore_auth:
+            - write:subscribers
+            - read:subscribers
+      x-codegen-request-body-name: body
+    delete:
+      tags:
+        - subscriber
+      summary: Deletes a subscriber
+      operationId: deleteSubscriber
+      parameters:
+        - name: api_key
+          in: header
+          schema:
+            type: string
+        - name: subscriberId
+          in: path
+          description: Subscriber id to delete
+          required: true
+          schema:
+            type: integer
+            format: int64
+      responses:
+        400:
+          description: Invalid ID supplied
+          content: {}
+        404:
+          description: subscriber not found
+          content: {}
+      security:
+        - petstore_auth:
+            - write:subscribers
+            - read:subscribers
+    post:
+      tags:
+        - subscriber
+      summary: Add a new subscriber to the RDQ_IN
+      operationId: addSubscriber
+      requestBody:
+        description: Subscriber object that needs to be added to RDQ_IN
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Subscriber'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/Subscriber'
+        required: true
+      responses:
+        405:
+          description: Invalid input
+          content: {}
+      security:
+        - petstore_auth:
+            - write:subscribers
+            - read:subscribers
+      x-codegen-request-body-name: body
+
+  /subscriber/findByQuery:
+    get:
+      tags:
+        - subscriber
+      summary: Finds subscribers by query
+      description: Multiple status values can be provided with comma separated strings
+      operationId: findSubscribersByQuery
+      parameters:
+        - name: requestID
+          in: path
+          description: ID of subscriber that needs to be fetched
+          required: true
+          schema:
+            maximum: 10.0
+            minimum: 1.0
+            type: string
+        - name: origin
+          in: path
+          description: origin of subscriber that needs to be fetched
+          required: true
+          schema:
+            maximum: 10.0
+            minimum: 1.0
+            type: string
+        - name: netprofileid
+          in: path
+          description: netprofileid of subscriber that needs to be fetched
+          required: true
+          schema:
+            maximum: 10.0
+            minimum: 1.0
+            type: string
+        - name: tlnnr
+          in: path
+          description: tlnnr of subscriber that needs to be fetched
+          required: true
+          schema:
+            maximum: 10.0
+            minimum: 1.0
+            type: string
+      responses:
+        200:
+          description: successful operation
+          content:
+            application/xml:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Subscriber'
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Subscriber'
+        400:
+          description: Invalid status value
+          content: {}
+      security:
+        - petstore_auth:
+            - write:subscribers
+            - read:subscribers

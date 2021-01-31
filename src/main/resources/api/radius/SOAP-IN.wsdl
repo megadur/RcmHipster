@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<wsdl:description targetNamespace="http://dummydomain.telekom.de/RDQ/IN_1/wsdl" xmlns:wsdl="http://www.w3.org/ns/wsdl" xmlns:wsoap="http://www.w3.org/ns/wsdl/soap" xmlns:whttp="http://www.w3.org/ns/wsdl/http" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:rdq="http://dummydomain.telekom.de/RDQ/IN_1" xmlns:ns="http://dummydomain.telekom.de/RDQ/IN_1/wsdl" xmlns:ns1="http://dummydomain.telekom.de/schemadoc" xmlns:ns2="http://www.w3.org/2003/05/soap-envelope">
+	<wsdl:documentation/>
+	<wsdl:types>
+		<xs:import namespace="http://dummydomain.telekom.de/RDQ/IN_1" schemaLocation="IN.xsd"/>
+	</wsdl:types>
+	<wsdl:interface name="subscriberProvisioning">
+		<wsdl:operation name="UpdateSubscriber" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<wsdl:documentation/>
+			<wsdl:input messageLabel="In" element="rdq:UpdateRequestSubscriber"/>
+			<wsdl:output messageLabel="Out" element="rdq:UpdateResponseSubscriber"/>
+		</wsdl:operation>
+		<wsdl:operation name="QuerySubscriber" pattern="http://www.w3.org/ns/wsdl/in-out">
+			<wsdl:documentation/>
+			<wsdl:input messageLabel="In" element="rdq:QueryRequestSubscriber"/>
+			<wsdl:output messageLabel="Out" element="rdq:QueryResponseSubscriber"/>
+			<wsdl:outfault ref="ns:RDQFault"/>
+		</wsdl:operation>
+		<wsdl:operation name="NotifySubscriber" pattern="http://www.w3.org/ns/wsdl/out-only">
+			<wsdl:documentation/>
+			<wsdl:output messageLabel="Out" element="rdq:NotifyRequestSubscriber"/>
+		</wsdl:operation>
+		<wsdl:operation name="StandardResp" pattern="http://www.w3.org/ns/wsdl/out-only">
+			<wsdl:documentation/>
+			<wsdl:output messageLabel="Out" element="rdq:Response"/>
+		</wsdl:operation>
+		<wsdl:fault name="RDQFault" element="rdq:Fault">
+			<wsdl:documentation/>
+		</wsdl:fault>
+	</wsdl:interface>
+	<wsdl:binding name="subscriberProvisioningSOAPBinding" interface="ns:subscriberProvisioning" type="http://www.w3.org/ns/wsdl/soap" wsoap:protocol="http://www.w3.org/2003/05/soap/bindings/HTTP/">
+		<wsdl:operation ref="ns:UpdateSubscriber" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response/" wsoap:action="http://rdq1.telekom.de:80/hcs/Subscriber_provisioning">
+			<wsdl:input messageLabel="In"/>
+			<wsdl:output messageLabel="Out"/>
+		</wsdl:operation>
+		<wsdl:operation ref="ns:QuerySubscriber" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response/" wsoap:action="http://rdq1.telekom.de:80/hcs/Subscriber_provisioning">
+			<wsdl:input messageLabel="In"/>
+			<wsdl:output messageLabel="Out"/>
+		</wsdl:operation>
+		<wsdl:operation ref="ns:NotifySubscriber" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response/" wsoap:action="http://rdq1.telekom.de:80/hcs/Subscriber_provisioning">
+			<wsdl:output messageLabel="Out"/>
+		</wsdl:operation>
+		<wsdl:operation ref="ns:StandardResp" wsoap:mep="http://www.w3.org/2003/05/soap/mep/request-response/" wsoap:action="http://rdq1.telekom.de:80/hcs/Subscriber_provisioning">
+			<wsdl:output messageLabel="Out"/>
+		</wsdl:operation>
+		<wsdl:fault ref="ns:RDQFault"/>
+	</wsdl:binding>
+	<wsdl:service name="RDQSOAPServices" interface="ns:subscriberProvisioning">
+		<wsdl:endpoint name="RDQ-SOAP" binding="ns:subscriberProvisioningSOAPBinding" address="http://rdq1.telekom.de:80" whttp:authenticationScheme="digest" whttp:authenticationRealm="rdq.telekom.de">
+			<wsdl:documentation>Nach erfolgter Abstimmung mit dem Kunden muss an dieser Stelle noch die RDQ URI eingetragen werden.</wsdl:documentation>
+		</wsdl:endpoint>
+	</wsdl:service>
+</wsdl:description>

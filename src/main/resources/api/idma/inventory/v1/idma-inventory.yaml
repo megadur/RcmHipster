@@ -1,0 +1,69 @@
+openapi: 3.0.0
+info:
+  title: IDMA-RCM Inventory API
+  description: IDMA Service für die Aktualisierung des IDMA Bestands
+  version: 0.0.1
+servers:
+  - url: http://localhost:8080/idma-war/service/rcm
+    description: Lokaler Testserver
+paths:
+  /inventory/{toNr}:
+    put:
+      summary: IDMA Bestand aktualisieren
+      parameters:
+      - in: path
+        name: toNr
+        required: true
+        schema:
+          type: string
+          pattern: '^\\d{5,12}$'
+          example: '550012345678'
+        description: TONR des Subscribers
+      requestBody:
+        description: Attribute für den IDMA Bestand
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Inventory'
+      responses:
+        '204':
+          description: Antwort für erfolgreiche Aufrufe
+        '500':
+          description: Antwort Struktur für fehlerhafte Aufrufe
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InventoryError'
+components:
+  schemas:
+    Inventory:
+      type: object
+      properties:
+        lineID:
+          type: string
+          description: LineID des Subscribers
+          pattern: '^[A-Z0-9]{1,3}[.][A-Z0-9]{1,6}[.][A-Z0-9]{1,10}$'
+          example: 'DEU.DTAG.1A2B3C4E'
+        userAuthReq:
+          type: integer
+          description: User-Auth-Required Flag
+          minimum: 0
+          maximum: 1
+          example: 1
+      required:
+      - lineID
+      - userAuthReq
+    InventoryError:
+      type: object
+      properties:
+        returnCode:
+          type: integer
+          description: Fehlercode
+          example: 10
+        returnText:
+          type: string
+          description: Fehlertext
+          example: 'Invalide toNr'
+      required:
+      - returnCode

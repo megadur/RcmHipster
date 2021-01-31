@@ -10,14 +10,6 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "dlgipv6Prefix",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "dlgipv6Prefixlen",
-      "fieldType": "String"
-    },
-    {
       "fieldName": "dnsProfile",
       "fieldType": "String"
     },
@@ -31,26 +23,6 @@
     },
     {
       "fieldName": "errorvalue",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "filterid",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "frmdipv6Prefix",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "frmdipv6Prefixlen",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "ipaddress",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "ipnetmask",
       "fieldType": "String"
     },
     {
@@ -75,10 +47,6 @@
     },
     {
       "fieldName": "mfzg",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "msisdn",
       "fieldType": "String"
     },
     {
@@ -118,10 +86,6 @@
       "fieldType": "String"
     },
     {
-      "fieldName": "reserveprefix",
-      "fieldType": "String"
-    },
-    {
       "fieldName": "returnmessage",
       "fieldType": "String"
     },
@@ -135,14 +99,6 @@
     },
     {
       "fieldName": "tlnsps",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "tunnelProfile",
-      "fieldType": "String"
-    },
-    {
-      "fieldName": "umtServiceData",
       "fieldType": "String"
     },
     {

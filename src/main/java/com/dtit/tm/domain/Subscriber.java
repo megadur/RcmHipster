@@ -24,12 +24,6 @@ public class Subscriber implements Serializable {
     @Column(name = "calid")
     private String calid;
 
-    @Column(name = "dlgipv_6_prefix")
-    private String dlgipv6Prefix;
-
-    @Column(name = "dlgipv_6_prefixlen")
-    private String dlgipv6Prefixlen;
-
     @Column(name = "dns_profile")
     private String dnsProfile;
 
@@ -41,21 +35,6 @@ public class Subscriber implements Serializable {
 
     @Column(name = "errorvalue")
     private String errorvalue;
-
-    @Column(name = "filterid")
-    private String filterid;
-
-    @Column(name = "frmdipv_6_prefix")
-    private String frmdipv6Prefix;
-
-    @Column(name = "frmdipv_6_prefixlen")
-    private String frmdipv6Prefixlen;
-
-    @Column(name = "ipaddress")
-    private String ipaddress;
-
-    @Column(name = "ipnetmask")
-    private String ipnetmask;
 
     @Column(name = "ipversion")
     private String ipversion;
@@ -74,9 +53,6 @@ public class Subscriber implements Serializable {
 
     @Column(name = "mfzg")
     private String mfzg;
-
-    @Column(name = "msisdn")
-    private String msisdn;
 
     @Column(name = "netprofileid")
     private String netprofileid;
@@ -105,9 +81,6 @@ public class Subscriber implements Serializable {
     @Column(name = "request_id")
     private String requestID;
 
-    @Column(name = "reserveprefix")
-    private String reserveprefix;
-
     @Column(name = "returnmessage")
     private String returnmessage;
 
@@ -119,12 +92,6 @@ public class Subscriber implements Serializable {
 
     @Column(name = "tlnsps")
     private String tlnsps;
-
-    @Column(name = "tunnel_profile")
-    private String tunnelProfile;
-
-    @Column(name = "umt_service_data")
-    private String umtServiceData;
 
     @Column(name = "user_auth_required")
     private String userAuthRequired;
@@ -162,32 +129,6 @@ public class Subscriber implements Serializable {
 
     public void setCalid(String calid) {
         this.calid = calid;
-    }
-
-    public String getDlgipv6Prefix() {
-        return dlgipv6Prefix;
-    }
-
-    public Subscriber dlgipv6Prefix(String dlgipv6Prefix) {
-        this.dlgipv6Prefix = dlgipv6Prefix;
-        return this;
-    }
-
-    public void setDlgipv6Prefix(String dlgipv6Prefix) {
-        this.dlgipv6Prefix = dlgipv6Prefix;
-    }
-
-    public String getDlgipv6Prefixlen() {
-        return dlgipv6Prefixlen;
-    }
-
-    public Subscriber dlgipv6Prefixlen(String dlgipv6Prefixlen) {
-        this.dlgipv6Prefixlen = dlgipv6Prefixlen;
-        return this;
-    }
-
-    public void setDlgipv6Prefixlen(String dlgipv6Prefixlen) {
-        this.dlgipv6Prefixlen = dlgipv6Prefixlen;
     }
 
     public String getDnsProfile() {
@@ -240,71 +181,6 @@ public class Subscriber implements Serializable {
 
     public void setErrorvalue(String errorvalue) {
         this.errorvalue = errorvalue;
-    }
-
-    public String getFilterid() {
-        return filterid;
-    }
-
-    public Subscriber filterid(String filterid) {
-        this.filterid = filterid;
-        return this;
-    }
-
-    public void setFilterid(String filterid) {
-        this.filterid = filterid;
-    }
-
-    public String getFrmdipv6Prefix() {
-        return frmdipv6Prefix;
-    }
-
-    public Subscriber frmdipv6Prefix(String frmdipv6Prefix) {
-        this.frmdipv6Prefix = frmdipv6Prefix;
-        return this;
-    }
-
-    public void setFrmdipv6Prefix(String frmdipv6Prefix) {
-        this.frmdipv6Prefix = frmdipv6Prefix;
-    }
-
-    public String getFrmdipv6Prefixlen() {
-        return frmdipv6Prefixlen;
-    }
-
-    public Subscriber frmdipv6Prefixlen(String frmdipv6Prefixlen) {
-        this.frmdipv6Prefixlen = frmdipv6Prefixlen;
-        return this;
-    }
-
-    public void setFrmdipv6Prefixlen(String frmdipv6Prefixlen) {
-        this.frmdipv6Prefixlen = frmdipv6Prefixlen;
-    }
-
-    public String getIpaddress() {
-        return ipaddress;
-    }
-
-    public Subscriber ipaddress(String ipaddress) {
-        this.ipaddress = ipaddress;
-        return this;
-    }
-
-    public void setIpaddress(String ipaddress) {
-        this.ipaddress = ipaddress;
-    }
-
-    public String getIpnetmask() {
-        return ipnetmask;
-    }
-
-    public Subscriber ipnetmask(String ipnetmask) {
-        this.ipnetmask = ipnetmask;
-        return this;
-    }
-
-    public void setIpnetmask(String ipnetmask) {
-        this.ipnetmask = ipnetmask;
     }
 
     public String getIpversion() {
@@ -383,19 +259,6 @@ public class Subscriber implements Serializable {
 
     public void setMfzg(String mfzg) {
         this.mfzg = mfzg;
-    }
-
-    public String getMsisdn() {
-        return msisdn;
-    }
-
-    public Subscriber msisdn(String msisdn) {
-        this.msisdn = msisdn;
-        return this;
-    }
-
-    public void setMsisdn(String msisdn) {
-        this.msisdn = msisdn;
     }
 
     public String getNetprofileid() {
@@ -515,19 +378,6 @@ public class Subscriber implements Serializable {
         this.requestID = requestID;
     }
 
-    public String getReserveprefix() {
-        return reserveprefix;
-    }
-
-    public Subscriber reserveprefix(String reserveprefix) {
-        this.reserveprefix = reserveprefix;
-        return this;
-    }
-
-    public void setReserveprefix(String reserveprefix) {
-        this.reserveprefix = reserveprefix;
-    }
-
     public String getReturnmessage() {
         return returnmessage;
     }
@@ -580,32 +430,6 @@ public class Subscriber implements Serializable {
         this.tlnsps = tlnsps;
     }
 
-    public String getTunnelProfile() {
-        return tunnelProfile;
-    }
-
-    public Subscriber tunnelProfile(String tunnelProfile) {
-        this.tunnelProfile = tunnelProfile;
-        return this;
-    }
-
-    public void setTunnelProfile(String tunnelProfile) {
-        this.tunnelProfile = tunnelProfile;
-    }
-
-    public String getUmtServiceData() {
-        return umtServiceData;
-    }
-
-    public Subscriber umtServiceData(String umtServiceData) {
-        this.umtServiceData = umtServiceData;
-        return this;
-    }
-
-    public void setUmtServiceData(String umtServiceData) {
-        this.umtServiceData = umtServiceData;
-    }
-
     public String getUserAuthRequired() {
         return userAuthRequired;
     }
@@ -643,24 +467,16 @@ public class Subscriber implements Serializable {
             "id=" + getId() +
             ", asskeng='" + getAsskeng() + "'" +
             ", calid='" + getCalid() + "'" +
-            ", dlgipv6Prefix='" + getDlgipv6Prefix() + "'" +
-            ", dlgipv6Prefixlen='" + getDlgipv6Prefixlen() + "'" +
             ", dnsProfile='" + getDnsProfile() + "'" +
             ", errorelement='" + getErrorelement() + "'" +
             ", errormessage='" + getErrormessage() + "'" +
             ", errorvalue='" + getErrorvalue() + "'" +
-            ", filterid='" + getFilterid() + "'" +
-            ", frmdipv6Prefix='" + getFrmdipv6Prefix() + "'" +
-            ", frmdipv6Prefixlen='" + getFrmdipv6Prefixlen() + "'" +
-            ", ipaddress='" + getIpaddress() + "'" +
-            ", ipnetmask='" + getIpnetmask() + "'" +
             ", ipversion='" + getIpversion() + "'" +
             ", keyid='" + getKeyid() + "'" +
             ", maxDownL3='" + getMaxDownL3() + "'" +
             ", maxSessionDuration='" + getMaxSessionDuration() + "'" +
             ", maxUpL3='" + getMaxUpL3() + "'" +
             ", mfzg='" + getMfzg() + "'" +
-            ", msisdn='" + getMsisdn() + "'" +
             ", netprofileid='" + getNetprofileid() + "'" +
             ", origin='" + getOrigin() + "'" +
             ", passwort='" + getPasswort() + "'" +
@@ -670,13 +486,10 @@ public class Subscriber implements Serializable {
             ", rc='" + getRc() + "'" +
             ", rectime='" + getRectime() + "'" +
             ", requestID='" + getRequestID() + "'" +
-            ", reserveprefix='" + getReserveprefix() + "'" +
             ", returnmessage='" + getReturnmessage() + "'" +
             ", rsptime='" + getRsptime() + "'" +
             ", tlnnr='" + getTlnnr() + "'" +
             ", tlnsps='" + getTlnsps() + "'" +
-            ", tunnelProfile='" + getTunnelProfile() + "'" +
-            ", umtServiceData='" + getUmtServiceData() + "'" +
             ", userAuthRequired='" + getUserAuthRequired() + "'" +
             "}";
     }

@@ -1,0 +1,314 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<xs:schema targetNamespace="http://dummydomain.telekom.de/RDQ/IN_1" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://dummydomain.telekom.de/RDQ/IN_1" xmlns:rdq="http://dummydomain.telekom.de/RDQ/IN_1" xmlns:env="http://www.w3.org/2003/05/soap-envelope">
+	<xs:include schemaLocation="INBase.xsd"></xs:include>
+	<xs:import namespace="http://www.w3.org/2003/05/soap-envelope" schemaLocation="soap-envelope.xsd"></xs:import>
+	<xs:complexType name="faultcode">
+		<xs:sequence>
+			<xs:element name="Value" type="faultcodeEnum"></xs:element>
+			<xs:element name="Subcode" type="env:subcode" minOccurs="0"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="faultcodeEnum">
+		<xs:restriction base="xs:string"></xs:restriction>
+	</xs:simpleType>
+	<xs:element name="CreateRequestSubscriber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID" minOccurs="0"></xs:element>
+				<xs:element name="origin" type="Origin"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID"></xs:element>
+				<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+				<xs:element name="asskeng" type="Anschlusskennung"></xs:element>
+				<xs:sequence minOccurs="0">
+					<xs:element name="calid" type="Calid"></xs:element>
+					<xs:element name="user-auth-required" type="UserAuthenticationRequired" minOccurs="0"></xs:element>
+				</xs:sequence>
+				<xs:choice>
+					<xs:element name="passwort" type="Password"></xs:element>
+					<xs:sequence>
+						<xs:element name="passwort-enc" type="PasswordEncrypted"></xs:element>
+						<xs:element name="keyid" type="KeyID"></xs:element>
+					</xs:sequence>
+				</xs:choice>
+				<xs:element name="mfzg" type="MehrfachZugang" minOccurs="0"></xs:element>
+				<xs:element name="tlnsps" type="SubscriberSperrStatus" minOccurs="0"></xs:element>
+				<xs:element name="profilset" type="ProfilSet" minOccurs="0"></xs:element>
+				<xs:element name="tunnel-profile" type="TunnelProfile" minOccurs="0"></xs:element>
+				<xs:element name="dns-profile" type="DNSProfile" minOccurs="0"></xs:element>
+				<xs:element name="filterid" type="FilterID" minOccurs="0"></xs:element>
+				<xs:element name="policy-group" type="PolicyGroup" minOccurs="0"></xs:element>
+				<xs:element name="max-up-l3" type="MaxUpspeed" minOccurs="0"></xs:element>
+				<xs:element name="max-down-l3" type="MaxDownspeed" minOccurs="0"></xs:element>
+				<xs:element name="max-session-duration" type="MaxSessionDuration" minOccurs="0"></xs:element>
+				<xs:element name="ipversion" type="IPVersion" minOccurs="0"></xs:element>
+				<xs:element name="ipaddress" type="IPv4Address" minOccurs="0"></xs:element>
+				<xs:element name="ipnetmask" type="IPv4NetMask" minOccurs="0"></xs:element>
+				<xs:element name="reserveprefix" type="ReservePrefix" minOccurs="0"></xs:element>
+				<xs:sequence minOccurs="0">
+					<xs:element name="frmdipv6prefix" type="FramedIPv6Prefix"></xs:element>
+					<xs:element name="frmdipv6prefixlen" type="FramedIPv6PrefixLength"></xs:element>
+				</xs:sequence>
+				<xs:sequence minOccurs="0">
+					<xs:element name="dlgipv6prefix" type="DelegatedIPv6Prefix"></xs:element>
+					<xs:element name="dlgipv6prefixlen" type="DelegatedIPv6PrefixLength"></xs:element>
+				</xs:sequence>
+				<xs:element name="umt-service-data" type="UMTServiceData" minOccurs="0"></xs:element>
+				<xs:element name="msisdn" type="MSISDN" minOccurs="0"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="CreateResponseSubscriber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID" minOccurs="0"></xs:element>
+				<xs:element name="origin" type="Origin" minOccurs="0"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID" minOccurs="0"></xs:element>
+				<xs:element name="rc" type="ReturnCode"></xs:element>
+				<xs:element name="returnmessage" type="ReturnMessage"></xs:element>
+				<xs:element name="errormessage" type="ErrorMessage" minOccurs="0"></xs:element>
+				<xs:element name="errorelement" type="ErrorElement" minOccurs="0"></xs:element>
+				<xs:element name="errorvalue" type="ErrorValue" minOccurs="0"></xs:element>
+				<xs:element name="rectime" type="ReceiveTime"></xs:element>
+				<xs:element name="rsptime" type="ResponseTime"></xs:element>
+				<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateRequestSubscriber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID" minOccurs="0"></xs:element>
+				<xs:element name="origin" type="Origin"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID"></xs:element>
+				<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+				<xs:element name="asskeng" type="Anschlusskennung" minOccurs="0"></xs:element>
+				<xs:element name="calid" type="Calid" minOccurs="0"></xs:element>
+				<xs:element name="user-auth-required" type="UserAuthenticationRequiredOrEmpty" minOccurs="0"></xs:element>
+				<xs:element name="influence-session" type="InfluenceSession" minOccurs="0"></xs:element>
+				<xs:element name="coa-nak-reaction" type="CoANAKReaction" minOccurs="0"></xs:element>
+				<xs:element name="term-profil" type="TerminationProfile" minOccurs="0"></xs:element>
+				<xs:choice minOccurs="0">
+					<xs:element name="passwort" type="Password"></xs:element>
+					<xs:sequence>
+						<xs:element name="passwort-enc" type="PasswordEncrypted"></xs:element>
+						<xs:element name="keyid" type="KeyID"></xs:element>
+					</xs:sequence>
+				</xs:choice>
+				<xs:element name="mfzg" type="MehrfachZugang" minOccurs="0"></xs:element>
+				<xs:element name="tlnsps" type="SubscriberSperrStatus" minOccurs="0"></xs:element>
+				<xs:element name="logonsps" type="LogonSperrStatus" fixed="0" minOccurs="0"></xs:element>
+				<xs:element name="profilset" type="ProfilSet" minOccurs="0"></xs:element>
+				<xs:element name="tunnel-profile" type="TunnelProfile" minOccurs="0"></xs:element>
+				<xs:element name="dns-profile" type="DNSProfile" minOccurs="0"></xs:element>
+				<xs:element name="filterid" type="FilterID" minOccurs="0"></xs:element>
+				<xs:element name="policy-group" type="PolicyGroup" minOccurs="0"></xs:element>
+				<xs:element name="max-up-l3" type="MaxUpspeed" minOccurs="0"></xs:element>
+				<xs:element name="max-down-l3" type="MaxDownspeed" minOccurs="0"></xs:element>
+				<xs:element name="max-session-duration" type="MaxSessionDuration" minOccurs="0"></xs:element>
+				<xs:element name="ipversion" type="IPVersion" minOccurs="0"></xs:element>
+				<xs:element name="ipaddress" type="IPv4Address" minOccurs="0"></xs:element>
+				<xs:element name="ipnetmask" type="IPv4NetMask" minOccurs="0"></xs:element>
+				<xs:element name="reserveprefix" type="ReservePrefix" minOccurs="0"></xs:element>
+				<xs:sequence minOccurs="0">
+					<xs:element name="frmdipv6prefix" type="FramedIPv6Prefix"></xs:element>
+					<xs:element name="frmdipv6prefixlen" type="FramedIPv6PrefixLength"></xs:element>
+				</xs:sequence>
+				<xs:sequence minOccurs="0">
+					<xs:element name="dlgipv6prefix" type="DelegatedIPv6Prefix"></xs:element>
+					<xs:element name="dlgipv6prefixlen" type="DelegatedIPv6PrefixLength"></xs:element>
+				</xs:sequence>
+				<xs:element name="umt-service-data" type="UMTServiceDataUpdate" minOccurs="0"></xs:element>
+				<xs:element name="msisdn" type="MSISDN" minOccurs="0"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="UpdateResponseSubscriber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID" minOccurs="0"></xs:element>
+				<xs:element name="origin" type="Origin" minOccurs="0"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID" minOccurs="0"></xs:element>
+				<xs:element name="rc" type="ReturnCode"></xs:element>
+				<xs:element name="returnmessage" type="ReturnMessage"></xs:element>
+				<xs:element name="errormessage" type="ErrorMessage" minOccurs="0"></xs:element>
+				<xs:element name="errorelement" type="ErrorElement" minOccurs="0"></xs:element>
+				<xs:element name="errorvalue" type="ErrorValue" minOccurs="0"></xs:element>
+				<xs:element name="rectime" type="ReceiveTime"></xs:element>
+				<xs:element name="rsptime" type="ResponseTime"></xs:element>
+				<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DeleteRequestSubscriber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID" minOccurs="0"></xs:element>
+				<xs:element name="origin" type="Origin"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID"></xs:element>
+				<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DeleteResponseSubscriber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID" minOccurs="0"></xs:element>
+				<xs:element name="origin" type="Origin" minOccurs="0"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID" minOccurs="0"></xs:element>
+				<xs:element name="rc" type="ReturnCode"></xs:element>
+				<xs:element name="returnmessage" type="ReturnMessage"></xs:element>
+				<xs:element name="errormessage" type="ErrorMessage" minOccurs="0"></xs:element>
+				<xs:element name="errorelement" type="ErrorElement" minOccurs="0"></xs:element>
+				<xs:element name="errorvalue" type="ErrorValue" minOccurs="0"></xs:element>
+				<xs:element name="rectime" type="ReceiveTime"></xs:element>
+				<xs:element name="rsptime" type="ResponseTime"></xs:element>
+				<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryRequestSubscriber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID" minOccurs="0"></xs:element>
+				<xs:element name="origin" type="Origin"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID"></xs:element>
+				<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="QueryResponseSubscriber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID" minOccurs="0"></xs:element>
+				<xs:element name="origin" type="Origin" minOccurs="0"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID" minOccurs="0"></xs:element>
+				<xs:element name="rc" type="ReturnCode"></xs:element>
+				<xs:element name="returnmessage" type="ReturnMessage"></xs:element>
+				<xs:element name="errormessage" type="ErrorMessage" minOccurs="0"></xs:element>
+				<xs:element name="errorelement" type="ErrorElement" minOccurs="0"></xs:element>
+				<xs:element name="errorvalue" type="ErrorValue" minOccurs="0"></xs:element>
+				<xs:element name="rectime" type="ReceiveTime"></xs:element>
+				<xs:element name="rsptime" type="ResponseTime"></xs:element>
+				<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+				<xs:element name="asskeng" type="Anschlusskennung" minOccurs="0"></xs:element>
+				<xs:element name="calid" type="Calid" minOccurs="0"></xs:element>
+				<xs:element name="user-auth-required" type="UserAuthenticationRequiredOrEmpty" minOccurs="0"></xs:element>
+				<xs:element name="mfzg" type="MehrfachZugang" minOccurs="0"></xs:element>
+				<xs:element name="tlnsps" type="SubscriberSperrStatus" minOccurs="0"></xs:element>
+				<xs:element name="logonsps" type="LogonSperrStatus" minOccurs="0"></xs:element>
+				<xs:element name="currlogonct" type="CurrentLogonCount" minOccurs="0"></xs:element>
+				<xs:element name="spstime" type="SperrZeitpunkt" minOccurs="0"></xs:element>
+				<xs:element name="spsrule" type="EntsperrRegel" minOccurs="0"></xs:element>
+				<xs:element name="profilset" type="ProfilSet" minOccurs="0"></xs:element>
+				<xs:element name="tunnel-profile" type="TunnelProfile" minOccurs="0"></xs:element>
+				<xs:element name="dns-profile" type="DNSProfile" minOccurs="0"></xs:element>
+				<xs:element name="filterid" type="FilterID" minOccurs="0"></xs:element>
+				<xs:element name="policy-group" type="PolicyGroup" minOccurs="0"></xs:element>
+				<xs:element name="max-up-l3" type="MaxUpspeed" minOccurs="0"></xs:element>
+				<xs:element name="max-down-l3" type="MaxDownspeed" minOccurs="0"></xs:element>
+				<xs:element name="max-session-duration" type="MaxSessionDuration" minOccurs="0"></xs:element>
+				<xs:element name="ipversion" type="IPVersion" minOccurs="0"></xs:element>
+				<xs:element name="ipaddress" type="IPv4Address" minOccurs="0"></xs:element>
+				<xs:element name="ipnetmask" type="IPv4NetMask" minOccurs="0"></xs:element>
+				<xs:element name="reserveprefix" type="ReservePrefix" minOccurs="0"></xs:element>
+				<xs:sequence minOccurs="0">
+					<xs:element name="frmdipv6prefix" type="FramedIPv6Prefix"></xs:element>
+					<xs:element name="frmdipv6prefixlen" type="FramedIPv6PrefixLength"></xs:element>
+				</xs:sequence>
+				<xs:sequence minOccurs="0">
+					<xs:element name="dlgipv6prefix" type="DelegatedIPv6Prefix"></xs:element>
+					<xs:element name="dlgipv6prefixlen" type="DelegatedIPv6PrefixLength"></xs:element>
+				</xs:sequence>
+				<xs:element name="umt-service-data" type="UMTServiceData" minOccurs="0"></xs:element>
+				<xs:element name="msisdn" type="MSISDN" minOccurs="0"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="NotifyRequestSubscriber">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID"></xs:element>
+				<xs:element name="origin" type="Origin"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID"></xs:element>
+				<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+				<xs:element name="returncode" type="ReturnCode"></xs:element>
+				<xs:element name="returnmessage" type="ReturnMessage"></xs:element>
+				<xs:element name="sessionCount" type="SessionCount"></xs:element>
+				<xs:element name="sessionList" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="session" maxOccurs="100">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="nasIPAddress" type="IPv4Address"></xs:element>
+										<xs:element name="contextNumber" type="ContextNumber"></xs:element>
+										<xs:element name="accountingSessionID" type="AccountingSessionID" minOccurs="0"></xs:element>
+										<xs:element name="sessionState" type="SessionStateUpdate"></xs:element>
+										<xs:element name="errorCode" type="ErrorCode" minOccurs="0"></xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="DTAGPROV">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="reqdata">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="systel" type="Systel"></xs:element>
+							<xs:element name="tlnnr" type="SubscriberNumber"></xs:element>
+							<xs:element name="suffix" type="MitbenutzerSuffix"></xs:element>
+							<xs:element name="spstime" type="SperrZeitpunkt"></xs:element>
+							<xs:element name="spsrule" type="EntsperrRegel" minOccurs="0"></xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="origin" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="RADIUS"></xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+			<xs:attribute name="docform" use="required">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="RAS-Req"></xs:enumeration>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="Response">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="RequestID" type="RequestID" minOccurs="0"></xs:element>
+				<xs:element name="origin" type="Origin" minOccurs="0"></xs:element>
+				<xs:element name="netprofileid" type="NetProfileID" minOccurs="0"></xs:element>
+				<xs:element name="rc" type="ReturnCode"></xs:element>
+				<xs:element name="returnmessage" type="ReturnMessage"></xs:element>
+				<xs:element name="errormessage" type="ErrorMessage" minOccurs="0"></xs:element>
+				<xs:element name="errorelement" type="ErrorElement" minOccurs="0"></xs:element>
+				<xs:element name="errorvalue" type="ErrorValue" minOccurs="0"></xs:element>
+				<xs:element name="rectime" type="ReceiveTime"></xs:element>
+				<xs:element name="rsptime" type="ResponseTime"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:complexType name="Fault" final="extension">
+		<xs:sequence>
+			<xs:element name="Code" type="faultcode"></xs:element>
+			<xs:element name="Reason" type="env:faultreason"></xs:element>
+			<xs:element name="Node" type="xs:anyURI" minOccurs="0"></xs:element>
+			<xs:element name="Role" type="xs:anyURI" minOccurs="0"></xs:element>
+			<xs:element name="Detail" type="env:detail" minOccurs="0"></xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:element name="Fault" type="Fault"></xs:element>
+</xs:schema>
