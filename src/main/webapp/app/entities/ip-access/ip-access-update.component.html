@@ -1,0 +1,248 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-ip-access-heading" jhiTranslate="rcmDemoMsApp.ipAccess.home.createOrEditLabel">Create or edit a Ip Access</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.anschlussbilanzierung" for="field_anschlussbilanzierung">Anschlussbilanzierung</label>
+                    <input type="text" class="form-control" name="anschlussbilanzierung" id="field_anschlussbilanzierung"
+                           formControlName="anschlussbilanzierung"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.bssoeorderid" for="field_bssoeorderid">Bssoeorderid</label>
+                    <input type="text" class="form-control" name="bssoeorderid" id="field_bssoeorderid"
+                           formControlName="bssoeorderid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.coanakreaction" for="field_coanakreaction">Coanakreaction</label>
+                    <input type="text" class="form-control" name="coanakreaction" id="field_coanakreaction"
+                           formControlName="coanakreaction"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.credentialsrequested" for="field_credentialsrequested">Credentialsrequested</label>
+                    <input type="text" class="form-control" name="credentialsrequested" id="field_credentialsrequested"
+                           formControlName="credentialsrequested"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.delegatedipv6prefix" for="field_delegatedipv6prefix">Delegatedipv 6 Prefix</label>
+                    <input type="text" class="form-control" name="delegatedipv6prefix" id="field_delegatedipv6prefix"
+                           formControlName="delegatedipv6prefix"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.delegatedipv6prefixlength" for="field_delegatedipv6prefixlength">Delegatedipv 6 Prefixlength</label>
+                    <input type="text" class="form-control" name="delegatedipv6prefixlength" id="field_delegatedipv6prefixlength"
+                           formControlName="delegatedipv6prefixlength"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.dnsprofile" for="field_dnsprofile">Dnsprofile</label>
+                    <input type="text" class="form-control" name="dnsprofile" id="field_dnsprofile"
+                           formControlName="dnsprofile"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.filterid" for="field_filterid">Filterid</label>
+                    <input type="text" class="form-control" name="filterid" id="field_filterid"
+                           formControlName="filterid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.fonAktiv" for="field_fonAktiv">Fon Aktiv</label>
+                    <input type="text" class="form-control" name="fonAktiv" id="field_fonAktiv"
+                           formControlName="fonAktiv"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.framedipv6prefix" for="field_framedipv6prefix">Framedipv 6 Prefix</label>
+                    <input type="text" class="form-control" name="framedipv6prefix" id="field_framedipv6prefix"
+                           formControlName="framedipv6prefix"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.framedipv6prefixlength" for="field_framedipv6prefixlength">Framedipv 6 Prefixlength</label>
+                    <input type="text" class="form-control" name="framedipv6prefixlength" id="field_framedipv6prefixlength"
+                           formControlName="framedipv6prefixlength"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.haMSISDN" for="field_haMSISDN">Ha MSISDN</label>
+                    <input type="text" class="form-control" name="haMSISDN" id="field_haMSISDN"
+                           formControlName="haMSISDN"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.influencesession" for="field_influencesession">Influencesession</label>
+                    <input type="text" class="form-control" name="influencesession" id="field_influencesession"
+                           formControlName="influencesession"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.iptvEnabled" for="field_iptvEnabled">Iptv Enabled</label>
+                    <input type="text" class="form-control" name="iptvEnabled" id="field_iptvEnabled"
+                           formControlName="iptvEnabled"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.ipv4address" for="field_ipv4address">Ipv 4 Address</label>
+                    <input type="text" class="form-control" name="ipv4address" id="field_ipv4address"
+                           formControlName="ipv4address"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.ipv4netmask" for="field_ipv4netmask">Ipv 4 Netmask</label>
+                    <input type="text" class="form-control" name="ipv4netmask" id="field_ipv4netmask"
+                           formControlName="ipv4netmask"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.ipversion" for="field_ipversion">Ipversion</label>
+                    <input type="text" class="form-control" name="ipversion" id="field_ipversion"
+                           formControlName="ipversion"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.lineid" for="field_lineid">Lineid</label>
+                    <input type="text" class="form-control" name="lineid" id="field_lineid"
+                           formControlName="lineid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.maxdownspeed" for="field_maxdownspeed">Maxdownspeed</label>
+                    <input type="text" class="form-control" name="maxdownspeed" id="field_maxdownspeed"
+                           formControlName="maxdownspeed"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.maxsessionduration" for="field_maxsessionduration">Maxsessionduration</label>
+                    <input type="text" class="form-control" name="maxsessionduration" id="field_maxsessionduration"
+                           formControlName="maxsessionduration"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.maxupspeed" for="field_maxupspeed">Maxupspeed</label>
+                    <input type="text" class="form-control" name="maxupspeed" id="field_maxupspeed"
+                           formControlName="maxupspeed"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.mehrfachzugang" for="field_mehrfachzugang">Mehrfachzugang</label>
+                    <input type="text" class="form-control" name="mehrfachzugang" id="field_mehrfachzugang"
+                           formControlName="mehrfachzugang"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.profileid" for="field_profileid">Profileid</label>
+                    <input type="text" class="form-control" name="profileid" id="field_profileid"
+                           formControlName="profileid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.profilset" for="field_profilset">Profilset</label>
+                    <input type="text" class="form-control" name="profilset" id="field_profilset"
+                           formControlName="profilset"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.rechtAufFesteIpadresse" for="field_rechtAufFesteIpadresse">Recht Auf Feste Ipadresse</label>
+                    <input type="text" class="form-control" name="rechtAufFesteIpadresse" id="field_rechtAufFesteIpadresse"
+                           formControlName="rechtAufFesteIpadresse"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.reserveprefix" for="field_reserveprefix">Reserveprefix</label>
+                    <input type="text" class="form-control" name="reserveprefix" id="field_reserveprefix"
+                           formControlName="reserveprefix"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.teilnehmersperre" for="field_teilnehmersperre">Teilnehmersperre</label>
+                    <input type="text" class="form-control" name="teilnehmersperre" id="field_teilnehmersperre"
+                           formControlName="teilnehmersperre"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.terminationprofile" for="field_terminationprofile">Terminationprofile</label>
+                    <input type="text" class="form-control" name="terminationprofile" id="field_terminationprofile"
+                           formControlName="terminationprofile"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.toNr" for="field_toNr">To Nr</label>
+                    <input type="text" class="form-control" name="toNr" id="field_toNr"
+                           formControlName="toNr"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.tunnelprofile" for="field_tunnelprofile">Tunnelprofile</label>
+                    <input type="text" class="form-control" name="tunnelprofile" id="field_tunnelprofile"
+                           formControlName="tunnelprofile"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.umtServiceDataOcssubscriptionid" for="field_umtServiceDataOcssubscriptionid">Umt Service Data Ocssubscriptionid</label>
+                    <input type="text" class="form-control" name="umtServiceDataOcssubscriptionid" id="field_umtServiceDataOcssubscriptionid"
+                           formControlName="umtServiceDataOcssubscriptionid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.umtServiceDataThrottledownl3" for="field_umtServiceDataThrottledownl3">Umt Service Data Throttledownl 3</label>
+                    <input type="text" class="form-control" name="umtServiceDataThrottledownl3" id="field_umtServiceDataThrottledownl3"
+                           formControlName="umtServiceDataThrottledownl3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.umtServiceDataThrottleprofile" for="field_umtServiceDataThrottleprofile">Umt Service Data Throttleprofile</label>
+                    <input type="text" class="form-control" name="umtServiceDataThrottleprofile" id="field_umtServiceDataThrottleprofile"
+                           formControlName="umtServiceDataThrottleprofile"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.umtServiceDataThrottleupl3" for="field_umtServiceDataThrottleupl3">Umt Service Data Throttleupl 3</label>
+                    <input type="text" class="form-control" name="umtServiceDataThrottleupl3" id="field_umtServiceDataThrottleupl3"
+                           formControlName="umtServiceDataThrottleupl3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.usecase" for="field_usecase">Usecase</label>
+                    <input type="text" class="form-control" name="usecase" id="field_usecase"
+                           formControlName="usecase"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.userauthenticationrequired" for="field_userauthenticationrequired">Userauthenticationrequired</label>
+                    <input type="text" class="form-control" name="userauthenticationrequired" id="field_userauthenticationrequired"
+                           formControlName="userauthenticationrequired"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.ipAccess.voipIsPresent" for="field_voipIsPresent">Voip Is Present</label>
+                    <input type="text" class="form-control" name="voipIsPresent" id="field_voipIsPresent"
+                           formControlName="voipIsPresent"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

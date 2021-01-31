@@ -1,0 +1,165 @@
+{
+  "name": "Subscriber",
+  "fields": [
+    {
+      "fieldName": "asskeng",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "calid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dlgipv6Prefix",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dlgipv6Prefixlen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dnsProfile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "errorelement",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "errormessage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "errorvalue",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "filterid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "frmdipv6Prefix",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "frmdipv6Prefixlen",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ipaddress",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ipnetmask",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ipversion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "keyid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maxDownL3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maxSessionDuration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maxUpL3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mfzg",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "msisdn",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "netprofileid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "origin",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "passwort",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "passwortEnc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "policyGroup",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profilset",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rc",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rectime",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "requestID",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reserveprefix",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "returnmessage",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rsptime",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tlnnr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tlnsps",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tunnelProfile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "umtServiceData",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "userAuthRequired",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210131094951",
+  "entityTableName": "subscriber",
+  "dto": "no",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["RcmDemoMs"]
+}

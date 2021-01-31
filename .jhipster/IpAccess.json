@@ -1,0 +1,165 @@
+{
+  "name": "IpAccess",
+  "fields": [
+    {
+      "fieldName": "anschlussbilanzierung",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "bssoeorderid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "coanakreaction",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "credentialsrequested",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delegatedipv6prefix",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "delegatedipv6prefixlength",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "dnsprofile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "filterid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "fonAktiv",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "framedipv6prefix",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "framedipv6prefixlength",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "haMSISDN",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "influencesession",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "iptvEnabled",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ipv4address",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ipv4netmask",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "ipversion",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "lineid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maxdownspeed",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maxsessionduration",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "maxupspeed",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "mehrfachzugang",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profileid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "profilset",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "rechtAufFesteIpadresse",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "reserveprefix",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "teilnehmersperre",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "terminationprofile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "toNr",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "tunnelprofile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "umtServiceDataOcssubscriptionid",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "umtServiceDataThrottledownl3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "umtServiceDataThrottleprofile",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "umtServiceDataThrottleupl3",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "usecase",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "userauthenticationrequired",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "voipIsPresent",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210131094851",
+  "entityTableName": "ip_access",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": ["RcmDemoMs"]
+}

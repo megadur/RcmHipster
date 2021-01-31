@@ -1,0 +1,248 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-subscriber-heading" jhiTranslate="rcmDemoMsApp.subscriber.home.createOrEditLabel">Create or edit a Subscriber</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id" jhiTranslate="global.field.id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.asskeng" for="field_asskeng">Asskeng</label>
+                    <input type="text" class="form-control" name="asskeng" id="field_asskeng"
+                           formControlName="asskeng"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.calid" for="field_calid">Calid</label>
+                    <input type="text" class="form-control" name="calid" id="field_calid"
+                           formControlName="calid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.dlgipv6Prefix" for="field_dlgipv6Prefix">Dlgipv 6 Prefix</label>
+                    <input type="text" class="form-control" name="dlgipv6Prefix" id="field_dlgipv6Prefix"
+                           formControlName="dlgipv6Prefix"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.dlgipv6Prefixlen" for="field_dlgipv6Prefixlen">Dlgipv 6 Prefixlen</label>
+                    <input type="text" class="form-control" name="dlgipv6Prefixlen" id="field_dlgipv6Prefixlen"
+                           formControlName="dlgipv6Prefixlen"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.dnsProfile" for="field_dnsProfile">Dns Profile</label>
+                    <input type="text" class="form-control" name="dnsProfile" id="field_dnsProfile"
+                           formControlName="dnsProfile"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.errorelement" for="field_errorelement">Errorelement</label>
+                    <input type="text" class="form-control" name="errorelement" id="field_errorelement"
+                           formControlName="errorelement"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.errormessage" for="field_errormessage">Errormessage</label>
+                    <input type="text" class="form-control" name="errormessage" id="field_errormessage"
+                           formControlName="errormessage"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.errorvalue" for="field_errorvalue">Errorvalue</label>
+                    <input type="text" class="form-control" name="errorvalue" id="field_errorvalue"
+                           formControlName="errorvalue"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.filterid" for="field_filterid">Filterid</label>
+                    <input type="text" class="form-control" name="filterid" id="field_filterid"
+                           formControlName="filterid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.frmdipv6Prefix" for="field_frmdipv6Prefix">Frmdipv 6 Prefix</label>
+                    <input type="text" class="form-control" name="frmdipv6Prefix" id="field_frmdipv6Prefix"
+                           formControlName="frmdipv6Prefix"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.frmdipv6Prefixlen" for="field_frmdipv6Prefixlen">Frmdipv 6 Prefixlen</label>
+                    <input type="text" class="form-control" name="frmdipv6Prefixlen" id="field_frmdipv6Prefixlen"
+                           formControlName="frmdipv6Prefixlen"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.ipaddress" for="field_ipaddress">Ipaddress</label>
+                    <input type="text" class="form-control" name="ipaddress" id="field_ipaddress"
+                           formControlName="ipaddress"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.ipnetmask" for="field_ipnetmask">Ipnetmask</label>
+                    <input type="text" class="form-control" name="ipnetmask" id="field_ipnetmask"
+                           formControlName="ipnetmask"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.ipversion" for="field_ipversion">Ipversion</label>
+                    <input type="text" class="form-control" name="ipversion" id="field_ipversion"
+                           formControlName="ipversion"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.keyid" for="field_keyid">Keyid</label>
+                    <input type="text" class="form-control" name="keyid" id="field_keyid"
+                           formControlName="keyid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.maxDownL3" for="field_maxDownL3">Max Down L 3</label>
+                    <input type="text" class="form-control" name="maxDownL3" id="field_maxDownL3"
+                           formControlName="maxDownL3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.maxSessionDuration" for="field_maxSessionDuration">Max Session Duration</label>
+                    <input type="text" class="form-control" name="maxSessionDuration" id="field_maxSessionDuration"
+                           formControlName="maxSessionDuration"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.maxUpL3" for="field_maxUpL3">Max Up L 3</label>
+                    <input type="text" class="form-control" name="maxUpL3" id="field_maxUpL3"
+                           formControlName="maxUpL3"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.mfzg" for="field_mfzg">Mfzg</label>
+                    <input type="text" class="form-control" name="mfzg" id="field_mfzg"
+                           formControlName="mfzg"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.msisdn" for="field_msisdn">Msisdn</label>
+                    <input type="text" class="form-control" name="msisdn" id="field_msisdn"
+                           formControlName="msisdn"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.netprofileid" for="field_netprofileid">Netprofileid</label>
+                    <input type="text" class="form-control" name="netprofileid" id="field_netprofileid"
+                           formControlName="netprofileid"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.origin" for="field_origin">Origin</label>
+                    <input type="text" class="form-control" name="origin" id="field_origin"
+                           formControlName="origin"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.passwort" for="field_passwort">Passwort</label>
+                    <input type="text" class="form-control" name="passwort" id="field_passwort"
+                           formControlName="passwort"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.passwortEnc" for="field_passwortEnc">Passwort Enc</label>
+                    <input type="text" class="form-control" name="passwortEnc" id="field_passwortEnc"
+                           formControlName="passwortEnc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.policyGroup" for="field_policyGroup">Policy Group</label>
+                    <input type="text" class="form-control" name="policyGroup" id="field_policyGroup"
+                           formControlName="policyGroup"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.profilset" for="field_profilset">Profilset</label>
+                    <input type="text" class="form-control" name="profilset" id="field_profilset"
+                           formControlName="profilset"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.rc" for="field_rc">Rc</label>
+                    <input type="text" class="form-control" name="rc" id="field_rc"
+                           formControlName="rc"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.rectime" for="field_rectime">Rectime</label>
+                    <input type="text" class="form-control" name="rectime" id="field_rectime"
+                           formControlName="rectime"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.requestID" for="field_requestID">Request ID</label>
+                    <input type="text" class="form-control" name="requestID" id="field_requestID"
+                           formControlName="requestID"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.reserveprefix" for="field_reserveprefix">Reserveprefix</label>
+                    <input type="text" class="form-control" name="reserveprefix" id="field_reserveprefix"
+                           formControlName="reserveprefix"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.returnmessage" for="field_returnmessage">Returnmessage</label>
+                    <input type="text" class="form-control" name="returnmessage" id="field_returnmessage"
+                           formControlName="returnmessage"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.rsptime" for="field_rsptime">Rsptime</label>
+                    <input type="text" class="form-control" name="rsptime" id="field_rsptime"
+                           formControlName="rsptime"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.tlnnr" for="field_tlnnr">Tlnnr</label>
+                    <input type="text" class="form-control" name="tlnnr" id="field_tlnnr"
+                           formControlName="tlnnr"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.tlnsps" for="field_tlnsps">Tlnsps</label>
+                    <input type="text" class="form-control" name="tlnsps" id="field_tlnsps"
+                           formControlName="tlnsps"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.tunnelProfile" for="field_tunnelProfile">Tunnel Profile</label>
+                    <input type="text" class="form-control" name="tunnelProfile" id="field_tunnelProfile"
+                           formControlName="tunnelProfile"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.umtServiceData" for="field_umtServiceData">Umt Service Data</label>
+                    <input type="text" class="form-control" name="umtServiceData" id="field_umtServiceData"
+                           formControlName="umtServiceData"/>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" jhiTranslate="rcmDemoMsApp.subscriber.userAuthRequired" for="field_userAuthRequired">User Auth Required</label>
+                    <input type="text" class="form-control" name="userAuthRequired" id="field_userAuthRequired"
+                           formControlName="userAuthRequired"/>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span jhiTranslate="entity.action.cancel">Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span jhiTranslate="entity.action.save">Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

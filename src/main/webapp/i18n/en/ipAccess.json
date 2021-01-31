@@ -1,0 +1,58 @@
+{
+  "rcmDemoMsApp": {
+    "ipAccess": {
+      "home": {
+        "title": "Ip Accesses",
+        "createLabel": "Create a new Ip Access",
+        "createOrEditLabel": "Create or edit a Ip Access",
+        "notFound": "No Ip Accesses found"
+      },
+      "created": "A new Ip Access is created with identifier {{ param }}",
+      "updated": "A Ip Access is updated with identifier {{ param }}",
+      "deleted": "A Ip Access is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Ip Access {{ id }}?"
+      },
+      "detail": {
+        "title": "Ip Access"
+      },
+      "anschlussbilanzierung": "Anschlussbilanzierung",
+      "bssoeorderid": "Bssoeorderid",
+      "coanakreaction": "Coanakreaction",
+      "credentialsrequested": "Credentialsrequested",
+      "delegatedipv6prefix": "Delegatedipv 6 Prefix",
+      "delegatedipv6prefixlength": "Delegatedipv 6 Prefixlength",
+      "dnsprofile": "Dnsprofile",
+      "filterid": "Filterid",
+      "fonAktiv": "Fon Aktiv",
+      "framedipv6prefix": "Framedipv 6 Prefix",
+      "framedipv6prefixlength": "Framedipv 6 Prefixlength",
+      "haMSISDN": "Ha MSISDN",
+      "influencesession": "Influencesession",
+      "iptvEnabled": "Iptv Enabled",
+      "ipv4address": "Ipv 4 Address",
+      "ipv4netmask": "Ipv 4 Netmask",
+      "ipversion": "Ipversion",
+      "lineid": "Lineid",
+      "maxdownspeed": "Maxdownspeed",
+      "maxsessionduration": "Maxsessionduration",
+      "maxupspeed": "Maxupspeed",
+      "mehrfachzugang": "Mehrfachzugang",
+      "profileid": "Profileid",
+      "profilset": "Profilset",
+      "rechtAufFesteIpadresse": "Recht Auf Feste Ipadresse",
+      "reserveprefix": "Reserveprefix",
+      "teilnehmersperre": "Teilnehmersperre",
+      "terminationprofile": "Terminationprofile",
+      "toNr": "To Nr",
+      "tunnelprofile": "Tunnelprofile",
+      "umtServiceDataOcssubscriptionid": "Umt Service Data Ocssubscriptionid",
+      "umtServiceDataThrottledownl3": "Umt Service Data Throttledownl 3",
+      "umtServiceDataThrottleprofile": "Umt Service Data Throttleprofile",
+      "umtServiceDataThrottleupl3": "Umt Service Data Throttleupl 3",
+      "usecase": "Usecase",
+      "userauthenticationrequired": "Userauthenticationrequired",
+      "voipIsPresent": "Voip Is Present"
+    }
+  }
+}

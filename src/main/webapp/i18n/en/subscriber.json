@@ -1,0 +1,58 @@
+{
+  "rcmDemoMsApp": {
+    "subscriber": {
+      "home": {
+        "title": "Subscribers",
+        "createLabel": "Create a new Subscriber",
+        "createOrEditLabel": "Create or edit a Subscriber",
+        "notFound": "No Subscribers found"
+      },
+      "created": "A new Subscriber is created with identifier {{ param }}",
+      "updated": "A Subscriber is updated with identifier {{ param }}",
+      "deleted": "A Subscriber is deleted with identifier {{ param }}",
+      "delete": {
+        "question": "Are you sure you want to delete Subscriber {{ id }}?"
+      },
+      "detail": {
+        "title": "Subscriber"
+      },
+      "asskeng": "Asskeng",
+      "calid": "Calid",
+      "dlgipv6Prefix": "Dlgipv 6 Prefix",
+      "dlgipv6Prefixlen": "Dlgipv 6 Prefixlen",
+      "dnsProfile": "Dns Profile",
+      "errorelement": "Errorelement",
+      "errormessage": "Errormessage",
+      "errorvalue": "Errorvalue",
+      "filterid": "Filterid",
+      "frmdipv6Prefix": "Frmdipv 6 Prefix",
+      "frmdipv6Prefixlen": "Frmdipv 6 Prefixlen",
+      "ipaddress": "Ipaddress",
+      "ipnetmask": "Ipnetmask",
+      "ipversion": "Ipversion",
+      "keyid": "Keyid",
+      "maxDownL3": "Max Down L 3",
+      "maxSessionDuration": "Max Session Duration",
+      "maxUpL3": "Max Up L 3",
+      "mfzg": "Mfzg",
+      "msisdn": "Msisdn",
+      "netprofileid": "Netprofileid",
+      "origin": "Origin",
+      "passwort": "Passwort",
+      "passwortEnc": "Passwort Enc",
+      "policyGroup": "Policy Group",
+      "profilset": "Profilset",
+      "rc": "Rc",
+      "rectime": "Rectime",
+      "requestID": "Request ID",
+      "reserveprefix": "Reserveprefix",
+      "returnmessage": "Returnmessage",
+      "rsptime": "Rsptime",
+      "tlnnr": "Tlnnr",
+      "tlnsps": "Tlnsps",
+      "tunnelProfile": "Tunnel Profile",
+      "umtServiceData": "Umt Service Data",
+      "userAuthRequired": "User Auth Required"
+    }
+  }
+}
