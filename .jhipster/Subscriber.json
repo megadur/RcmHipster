@@ -107,7 +107,7 @@
     }
   ],
   "relationships": [],
-  "changelogDate": "20210131094951",
+  "changelogDate": "20210131133513",
   "entityTableName": "subscriber",
   "dto": "no",
   "pagination": "infinite-scroll",
@@ -117,5 +117,5 @@
   "readOnly": false,
   "embedded": false,
   "clientRootFolder": "",
-  "applications": ["RcmDemoMs"]
+  "applications": "*"
 }

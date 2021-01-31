@@ -1,0 +1,56 @@
+
+
+entity IpAccess {
+  anschlussbilanzierung String,
+  bssoeorderid String,
+  dnsprofile String,
+  filterid String,
+  fonAktiv String,
+  ipversion String,
+  lineid String,
+  maxdownspeed String,
+  maxsessionduration String,
+  maxupspeed String,
+  mehrfachzugang String,
+  profileid String,
+  rechtAufFesteIpadresse String,
+  toNr String,
+  umtServiceDataOcssubscriptionid String,
+  umtServiceDataThrottledownl3 String,
+  umtServiceDataThrottleprofile String,
+  umtServiceDataThrottleupl3 String,
+  usecase String,
+  userauthenticationrequired String
+}
+
+entity Subscriber {
+  asskeng String,
+  calid String,
+  dnsProfile String,
+  errorelement String,
+  errormessage String,
+  errorvalue String,
+  ipversion String,
+  keyid String,
+  maxDownL3 String,
+  maxSessionDuration String,
+  maxUpL3 String,
+  mfzg String,
+  netprofileid String,
+  origin String,
+  passwort String,
+  passwortEnc String,
+  policyGroup String,
+  profilset String,
+  rc String,
+  rectime String,
+  requestID String,
+  returnmessage String,
+  rsptime String,
+  tlnnr String,
+  tlnsps String,
+  userAuthRequired String
+}
+paginate IpAccess with pagination
+paginate Subscriber with infinite-scroll
+service IpAccess, Subscriber with serviceClass
