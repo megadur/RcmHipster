@@ -109,7 +109,7 @@
   "relationships": [],
   "changelogDate": "20210131133513",
   "entityTableName": "subscriber",
-  "dto": "no",
+  "dto": "mapstruct",
   "pagination": "infinite-scroll",
   "service": "serviceClass",
   "jpaMetamodelFiltering": false,

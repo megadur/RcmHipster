@@ -1,0 +1,22 @@
+{
+  "rcmDemoMsApp": {
+    "line": {
+      "home": {
+        "title": "Lines",
+        "createLabel": "Создать новый Line",
+        "createOrEditLabel": "Создать или отредактировать Line",
+        "notFound": "No Lines found"
+      },
+      "created": "Новый Line создан с идентификатором {{ param }}",
+      "updated": "Line обновлен с идентификатором {{ param }}",
+      "deleted": "Line удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Line {{ id }}?"
+      },
+      "detail": {
+        "title": "Line"
+      },
+      "uar": "Uar"
+    }
+  }
+}

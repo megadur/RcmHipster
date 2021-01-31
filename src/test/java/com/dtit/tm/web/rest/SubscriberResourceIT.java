@@ -4,6 +4,8 @@ import com.dtit.tm.RcmDemoMsApp;
 import com.dtit.tm.domain.Subscriber;
 import com.dtit.tm.repository.SubscriberRepository;
 import com.dtit.tm.service.SubscriberService;
+import com.dtit.tm.service.dto.SubscriberDTO;
+import com.dtit.tm.service.mapper.SubscriberMapper;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -112,6 +114,9 @@ public class SubscriberResourceIT {
     private SubscriberRepository subscriberRepository;
 
     @Autowired
+    private SubscriberMapper subscriberMapper;
+
+    @Autowired
     private SubscriberService subscriberService;
 
     @Autowired
@@ -205,9 +210,10 @@ public class SubscriberResourceIT {
     public void createSubscriber() throws Exception {
         int databaseSizeBeforeCreate = subscriberRepository.findAll().size();
         // Create the Subscriber
+        SubscriberDTO subscriberDTO = subscriberMapper.toDto(subscriber);
         restSubscriberMockMvc.perform(post("/api/subscribers")
             .contentType(MediaType.APPLICATION_JSON)
-            .content(TestUtil.convertObjectToJsonBytes(subscriber)))
+            .content(TestUtil.convertObjectToJsonBytes(subscriberDTO)))
             .andExpect(status().isCreated());
 
         // Validate the Subscriber in the database
@@ -249,11 +255,12 @@ public class SubscriberResourceIT {
 
         // Create the Subscriber with an existing ID
         subscriber.setId(1L);
+        SubscriberDTO subscriberDTO = subscriberMapper.toDto(subscriber);
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restSubscriberMockMvc.perform(post("/api/subscribers")
             .contentType(MediaType.APPLICATION_JSON)
-            .content(TestUtil.convertObjectToJsonBytes(subscriber)))
+            .content(TestUtil.convertObjectToJsonBytes(subscriberDTO)))
             .andExpect(status().isBadRequest());
 
         // Validate the Subscriber in the database
@@ -351,7 +358,7 @@ public class SubscriberResourceIT {
     @Transactional
     public void updateSubscriber() throws Exception {
         // Initialize the database
-        subscriberService.save(subscriber);
+        subscriberRepository.saveAndFlush(subscriber);
 
         int databaseSizeBeforeUpdate = subscriberRepository.findAll().size();
 
@@ -386,10 +393,11 @@ public class SubscriberResourceIT {
             .tlnnr(UPDATED_TLNNR)
             .tlnsps(UPDATED_TLNSPS)
             .userAuthRequired(UPDATED_USER_AUTH_REQUIRED);
+        SubscriberDTO subscriberDTO = subscriberMapper.toDto(updatedSubscriber);
 
         restSubscriberMockMvc.perform(put("/api/subscribers")
             .contentType(MediaType.APPLICATION_JSON)
-            .content(TestUtil.convertObjectToJsonBytes(updatedSubscriber)))
+            .content(TestUtil.convertObjectToJsonBytes(subscriberDTO)))
             .andExpect(status().isOk());
 
         // Validate the Subscriber in the database
@@ -429,10 +437,13 @@ public class SubscriberResourceIT {
     public void updateNonExistingSubscriber() throws Exception {
         int databaseSizeBeforeUpdate = subscriberRepository.findAll().size();
 
+        // Create the Subscriber
+        SubscriberDTO subscriberDTO = subscriberMapper.toDto(subscriber);
+
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restSubscriberMockMvc.perform(put("/api/subscribers")
             .contentType(MediaType.APPLICATION_JSON)
-            .content(TestUtil.convertObjectToJsonBytes(subscriber)))
+            .content(TestUtil.convertObjectToJsonBytes(subscriberDTO)))
             .andExpect(status().isBadRequest());
 
         // Validate the Subscriber in the database
@@ -444,7 +455,7 @@ public class SubscriberResourceIT {
     @Transactional
     public void deleteSubscriber() throws Exception {
         // Initialize the database
-        subscriberService.save(subscriber);
+        subscriberRepository.saveAndFlush(subscriber);
 
         int databaseSizeBeforeDelete = subscriberRepository.findAll().size();
 

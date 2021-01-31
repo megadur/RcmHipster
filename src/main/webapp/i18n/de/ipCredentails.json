@@ -1,0 +1,22 @@
+{
+  "rcmDemoMsApp": {
+    "ipCredentails": {
+      "home": {
+        "title": "Ip Credentails",
+        "createLabel": "Ip Credentails erstellen",
+        "createOrEditLabel": "Ip Credentails erstellen oder bearbeiten",
+        "notFound": "No Ip Credentails found"
+      },
+      "created": "Ip Credentails erstellt mit ID {{ param }}",
+      "updated": "Ip Credentails aktualisiert mit ID {{ param }}",
+      "deleted": "Ip Credentails gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Ip Credentails {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Ip Credentails"
+      },
+      "toNr": "To Nr"
+    }
+  }
+}

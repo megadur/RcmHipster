@@ -1,0 +1,22 @@
+{
+  "rcmDemoMsApp": {
+    "ipCredentails": {
+      "home": {
+        "title": "Ip Credentails",
+        "createLabel": "Создать новый Ip Credentails",
+        "createOrEditLabel": "Создать или отредактировать Ip Credentails",
+        "notFound": "No Ip Credentails found"
+      },
+      "created": "Новый Ip Credentails создан с идентификатором {{ param }}",
+      "updated": "Ip Credentails обновлен с идентификатором {{ param }}",
+      "deleted": "Ip Credentails удален с идентификатором {{ param }}",
+      "delete": {
+        "question": "Вы уверены что хотите удалить Ip Credentails {{ id }}?"
+      },
+      "detail": {
+        "title": "Ip Credentails"
+      },
+      "toNr": "To Nr"
+    }
+  }
+}

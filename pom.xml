@@ -364,6 +364,9 @@
 
     <build>
         <defaultGoal>spring-boot:run</defaultGoal>
+        <sourceDirectory>${project.basedir}/target/generated-sources/openapi/src/main/java</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/src/test</testSourceDirectory> 
+  
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -905,8 +908,8 @@
                             <configuration>
                                 <inputSpec>${project.basedir}/src/main/resources/api/problem/api.yml</inputSpec>
                                 <generatorName>spring</generatorName>
-                                <apiPackage>com.dtit.tm.web.api</apiPackage>
-                                <modelPackage>com.dtit.tm.web.api.model</modelPackage>
+                                <apiPackage>com.dtit.tm.web.api.problem</apiPackage>
+                                <modelPackage>com.dtit.tm.web.api.problem.model</modelPackage>
                                 <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
                                 <importMappings>Problem=org.zalando.problem.Problem</importMappings>
                                 <skipValidateSpec>false</skipValidateSpec>
@@ -957,13 +960,27 @@
                             </configuration>
                         </execution>
                         <execution>
-                            <id>generate-sources-TMF638_client</id>
+                            <id>generate-sources-IDMA_credentials</id>
                             <goals>
                                 <goal>generate</goal>
                             </goals>
                             <configuration>
                                 <additionalJvmArgs>-Dlogback.configurationFile=${project.basedir}/src/test/resources/logback-codegen.xml</additionalJvmArgs>
-                                <inputSpec>${project.basedir}/src/main/resources/api/tmagic/inventory/v2/TMF638_swagger.json</inputSpec>
+                                <inputSpec>${project.basedir}/src/main/resources/api/idma/credentials/v2/idma-credentials.yaml</inputSpec>
+                                <language>java</language>
+                                <apiPackage>com.dtit.tm.client.api.credentials</apiPackage>
+                                <modelPackage>com.dtit.tm.client.api.credentials.model</modelPackage>
+                                <invokerPackage>com.dtit.tm.client.api.credentials.invoker</invokerPackage>
+                            </configuration>
+                        </execution>
+                        <execution>
+                            <id>generate-sources-IDMA_inventory</id>
+                            <goals>
+                                <goal>generate</goal>
+                            </goals>
+                            <configuration>
+                                <additionalJvmArgs>-Dlogback.configurationFile=${project.basedir}/src/test/resources/logback-codegen.xml</additionalJvmArgs>
+                                <inputSpec>${project.basedir}/src/main/resources/api/idma/inventory/v2/idma-inventory.yaml</inputSpec>
                                 <language>java</language>
                                 <apiPackage>com.dtit.tm.client.api.inventory</apiPackage>
                                 <modelPackage>com.dtit.tm.client.api.inventory.model</modelPackage>

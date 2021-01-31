@@ -4,6 +4,8 @@ import com.dtit.tm.RcmDemoMsApp;
 import com.dtit.tm.domain.IpAccess;
 import com.dtit.tm.repository.IpAccessRepository;
 import com.dtit.tm.service.IpAccessService;
+import com.dtit.tm.service.dto.IpAccessDTO;
+import com.dtit.tm.service.mapper.IpAccessMapper;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -94,6 +96,9 @@ public class IpAccessResourceIT {
     private IpAccessRepository ipAccessRepository;
 
     @Autowired
+    private IpAccessMapper ipAccessMapper;
+
+    @Autowired
     private IpAccessService ipAccessService;
 
     @Autowired
@@ -175,9 +180,10 @@ public class IpAccessResourceIT {
     public void createIpAccess() throws Exception {
         int databaseSizeBeforeCreate = ipAccessRepository.findAll().size();
         // Create the IpAccess
+        IpAccessDTO ipAccessDTO = ipAccessMapper.toDto(ipAccess);
         restIpAccessMockMvc.perform(post("/api/ip-accesses")
             .contentType(MediaType.APPLICATION_JSON)
-            .content(TestUtil.convertObjectToJsonBytes(ipAccess)))
+            .content(TestUtil.convertObjectToJsonBytes(ipAccessDTO)))
             .andExpect(status().isCreated());
 
         // Validate the IpAccess in the database
@@ -213,11 +219,12 @@ public class IpAccessResourceIT {
 
         // Create the IpAccess with an existing ID
         ipAccess.setId(1L);
+        IpAccessDTO ipAccessDTO = ipAccessMapper.toDto(ipAccess);
 
         // An entity with an existing ID cannot be created, so this API call must fail
         restIpAccessMockMvc.perform(post("/api/ip-accesses")
             .contentType(MediaType.APPLICATION_JSON)
-            .content(TestUtil.convertObjectToJsonBytes(ipAccess)))
+            .content(TestUtil.convertObjectToJsonBytes(ipAccessDTO)))
             .andExpect(status().isBadRequest());
 
         // Validate the IpAccess in the database
@@ -303,7 +310,7 @@ public class IpAccessResourceIT {
     @Transactional
     public void updateIpAccess() throws Exception {
         // Initialize the database
-        ipAccessService.save(ipAccess);
+        ipAccessRepository.saveAndFlush(ipAccess);
 
         int databaseSizeBeforeUpdate = ipAccessRepository.findAll().size();
 
@@ -332,10 +339,11 @@ public class IpAccessResourceIT {
             .umtServiceDataThrottleupl3(UPDATED_UMT_SERVICE_DATA_THROTTLEUPL_3)
             .usecase(UPDATED_USECASE)
             .userauthenticationrequired(UPDATED_USERAUTHENTICATIONREQUIRED);
+        IpAccessDTO ipAccessDTO = ipAccessMapper.toDto(updatedIpAccess);
 
         restIpAccessMockMvc.perform(put("/api/ip-accesses")
             .contentType(MediaType.APPLICATION_JSON)
-            .content(TestUtil.convertObjectToJsonBytes(updatedIpAccess)))
+            .content(TestUtil.convertObjectToJsonBytes(ipAccessDTO)))
             .andExpect(status().isOk());
 
         // Validate the IpAccess in the database
@@ -369,10 +377,13 @@ public class IpAccessResourceIT {
     public void updateNonExistingIpAccess() throws Exception {
         int databaseSizeBeforeUpdate = ipAccessRepository.findAll().size();
 
+        // Create the IpAccess
+        IpAccessDTO ipAccessDTO = ipAccessMapper.toDto(ipAccess);
+
         // If the entity doesn't have an ID, it will throw BadRequestAlertException
         restIpAccessMockMvc.perform(put("/api/ip-accesses")
             .contentType(MediaType.APPLICATION_JSON)
-            .content(TestUtil.convertObjectToJsonBytes(ipAccess)))
+            .content(TestUtil.convertObjectToJsonBytes(ipAccessDTO)))
             .andExpect(status().isBadRequest());
 
         // Validate the IpAccess in the database
@@ -384,7 +395,7 @@ public class IpAccessResourceIT {
     @Transactional
     public void deleteIpAccess() throws Exception {
         // Initialize the database
-        ipAccessService.save(ipAccess);
+        ipAccessRepository.saveAndFlush(ipAccess);
 
         int databaseSizeBeforeDelete = ipAccessRepository.findAll().size();
 

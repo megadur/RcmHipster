@@ -9,6 +9,9 @@
         "main": "Entities",
         "ipAccess": "Ip Access",
         "subscriber": "Subscriber",
+        "line": "Line",
+        "credentials": "Credentials",
+        "ipCredentails": "Ip Credentails",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

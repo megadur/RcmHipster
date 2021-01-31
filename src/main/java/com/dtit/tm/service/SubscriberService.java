@@ -2,6 +2,8 @@ package com.dtit.tm.service;
 
 import com.dtit.tm.domain.Subscriber;
 import com.dtit.tm.repository.SubscriberRepository;
+import com.dtit.tm.service.dto.SubscriberDTO;
+import com.dtit.tm.service.mapper.SubscriberMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -23,19 +25,24 @@ public class SubscriberService {
 
     private final SubscriberRepository subscriberRepository;
 
-    public SubscriberService(SubscriberRepository subscriberRepository) {
+    private final SubscriberMapper subscriberMapper;
+
+    public SubscriberService(SubscriberRepository subscriberRepository, SubscriberMapper subscriberMapper) {
         this.subscriberRepository = subscriberRepository;
+        this.subscriberMapper = subscriberMapper;
     }
 
     /**
      * Save a subscriber.
      *
-     * @param subscriber the entity to save.
+     * @param subscriberDTO the entity to save.
      * @return the persisted entity.
      */
-    public Subscriber save(Subscriber subscriber) {
-        log.debug("Request to save Subscriber : {}", subscriber);
-        return subscriberRepository.save(subscriber);
+    public SubscriberDTO save(SubscriberDTO subscriberDTO) {
+        log.debug("Request to save Subscriber : {}", subscriberDTO);
+        Subscriber subscriber = subscriberMapper.toEntity(subscriberDTO);
+        subscriber = subscriberRepository.save(subscriber);
+        return subscriberMapper.toDto(subscriber);
     }
 
     /**
@@ -45,9 +52,10 @@ public class SubscriberService {
      * @return the list of entities.
      */
     @Transactional(readOnly = true)
-    public Page<Subscriber> findAll(Pageable pageable) {
+    public Page<SubscriberDTO> findAll(Pageable pageable) {
         log.debug("Request to get all Subscribers");
-        return subscriberRepository.findAll(pageable);
+        return subscriberRepository.findAll(pageable)
+            .map(subscriberMapper::toDto);
     }
 
 
@@ -58,9 +66,10 @@ public class SubscriberService {
      * @return the entity.
      */
     @Transactional(readOnly = true)
-    public Optional<Subscriber> findOne(Long id) {
+    public Optional<SubscriberDTO> findOne(Long id) {
         log.debug("Request to get Subscriber : {}", id);
-        return subscriberRepository.findById(id);
+        return subscriberRepository.findById(id)
+            .map(subscriberMapper::toDto);
     }
 
     /**

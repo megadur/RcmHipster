@@ -1,0 +1,22 @@
+{
+  "rcmDemoMsApp": {
+    "line": {
+      "home": {
+        "title": "Lines",
+        "createLabel": "Line erstellen",
+        "createOrEditLabel": "Line erstellen oder bearbeiten",
+        "notFound": "No Lines found"
+      },
+      "created": "Line erstellt mit ID {{ param }}",
+      "updated": "Line aktualisiert mit ID {{ param }}",
+      "deleted": "Line gelöscht mit ID {{ param }}",
+      "delete": {
+        "question": "Soll Line {{ id }} wirklich dauerhaft gelöscht werden?"
+      },
+      "detail": {
+        "title": "Line"
+      },
+      "uar": "Uar"
+    }
+  }
+}

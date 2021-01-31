@@ -22,6 +22,9 @@ entity IpAccess {
   usecase String,
   userauthenticationrequired String
 }
+entity IpCredentails {
+  toNr String
+}
 
 entity Subscriber {
   asskeng String,
@@ -51,6 +54,21 @@ entity Subscriber {
   tlnsps String,
   userAuthRequired String
 }
+
+entity Line {
+  id String
+  uar Boolean
+}
+
+
+entity Credentials {
+    tonr String
+    ask String
+    password String
+}
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
 paginate IpAccess with pagination
 paginate Subscriber with infinite-scroll
 service IpAccess, Subscriber with serviceClass

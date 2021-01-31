@@ -85,7 +85,7 @@
   "relationships": [],
   "changelogDate": "20210131133413",
   "entityTableName": "ip_access",
-  "dto": "no",
+  "dto": "mapstruct",
   "pagination": "pagination",
   "service": "serviceClass",
   "jpaMetamodelFiltering": false,
