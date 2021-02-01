@@ -1,10 +1,10 @@
 <div>
     <h2 id="page-heading">
-        <span jhiTranslate="rcmDemoMsApp.ipAccess.home.title">Ip Accesses</span>
+        <span jhiTranslate="rcmHipsterApp.ipAccess.home.title">Ip Accesses</span>
 
         <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-ip-access" [routerLink]="['/ip-access/new']">
             <fa-icon icon="plus"></fa-icon>
-            <span  jhiTranslate="rcmDemoMsApp.ipAccess.home.createLabel">
+            <span  jhiTranslate="rcmHipsterApp.ipAccess.home.createLabel">
             Create a new Ip Access
             </span>
         </button>
@@ -15,7 +15,7 @@
     <jhi-alert></jhi-alert>
 
     <div class="alert alert-warning" id="no-result" *ngIf="ipAccesses?.length === 0">
-        <span jhiTranslate="rcmDemoMsApp.ipAccess.home.notFound">No ipAccesses found</span>
+        <span jhiTranslate="rcmHipsterApp.ipAccess.home.notFound">No ipAccesses found</span>
     </div>
 
     <div class="table-responsive" id="entities" *ngIf="ipAccesses && ipAccesses.length > 0">
@@ -23,26 +23,26 @@
             <thead>
                 <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="loadPage.bind(this)">
                     <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="anschlussbilanzierung"><span jhiTranslate="rcmDemoMsApp.ipAccess.anschlussbilanzierung">Anschlussbilanzierung</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="bssoeorderid"><span jhiTranslate="rcmDemoMsApp.ipAccess.bssoeorderid">Bssoeorderid</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="dnsprofile"><span jhiTranslate="rcmDemoMsApp.ipAccess.dnsprofile">Dnsprofile</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="filterid"><span jhiTranslate="rcmDemoMsApp.ipAccess.filterid">Filterid</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="fonAktiv"><span jhiTranslate="rcmDemoMsApp.ipAccess.fonAktiv">Fon Aktiv</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="ipversion"><span jhiTranslate="rcmDemoMsApp.ipAccess.ipversion">Ipversion</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="lineid"><span jhiTranslate="rcmDemoMsApp.ipAccess.lineid">Lineid</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="maxdownspeed"><span jhiTranslate="rcmDemoMsApp.ipAccess.maxdownspeed">Maxdownspeed</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="maxsessionduration"><span jhiTranslate="rcmDemoMsApp.ipAccess.maxsessionduration">Maxsessionduration</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="maxupspeed"><span jhiTranslate="rcmDemoMsApp.ipAccess.maxupspeed">Maxupspeed</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="mehrfachzugang"><span jhiTranslate="rcmDemoMsApp.ipAccess.mehrfachzugang">Mehrfachzugang</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="profileid"><span jhiTranslate="rcmDemoMsApp.ipAccess.profileid">Profileid</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="rechtAufFesteIpadresse"><span jhiTranslate="rcmDemoMsApp.ipAccess.rechtAufFesteIpadresse">Recht Auf Feste Ipadresse</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="toNr"><span jhiTranslate="rcmDemoMsApp.ipAccess.toNr">To Nr</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="umtServiceDataOcssubscriptionid"><span jhiTranslate="rcmDemoMsApp.ipAccess.umtServiceDataOcssubscriptionid">Umt Service Data Ocssubscriptionid</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="umtServiceDataThrottledownl3"><span jhiTranslate="rcmDemoMsApp.ipAccess.umtServiceDataThrottledownl3">Umt Service Data Throttledownl 3</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="umtServiceDataThrottleprofile"><span jhiTranslate="rcmDemoMsApp.ipAccess.umtServiceDataThrottleprofile">Umt Service Data Throttleprofile</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="umtServiceDataThrottleupl3"><span jhiTranslate="rcmDemoMsApp.ipAccess.umtServiceDataThrottleupl3">Umt Service Data Throttleupl 3</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="usecase"><span jhiTranslate="rcmDemoMsApp.ipAccess.usecase">Usecase</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="userauthenticationrequired"><span jhiTranslate="rcmDemoMsApp.ipAccess.userauthenticationrequired">Userauthenticationrequired</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="anschlussbilanzierung"><span jhiTranslate="rcmHipsterApp.ipAccess.anschlussbilanzierung">Anschlussbilanzierung</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="bssoeorderid"><span jhiTranslate="rcmHipsterApp.ipAccess.bssoeorderid">Bssoeorderid</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dnsprofile"><span jhiTranslate="rcmHipsterApp.ipAccess.dnsprofile">Dnsprofile</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="filterid"><span jhiTranslate="rcmHipsterApp.ipAccess.filterid">Filterid</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="fonAktiv"><span jhiTranslate="rcmHipsterApp.ipAccess.fonAktiv">Fon Aktiv</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="ipversion"><span jhiTranslate="rcmHipsterApp.ipAccess.ipversion">Ipversion</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="lineid"><span jhiTranslate="rcmHipsterApp.ipAccess.lineid">Lineid</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="maxdownspeed"><span jhiTranslate="rcmHipsterApp.ipAccess.maxdownspeed">Maxdownspeed</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="maxsessionduration"><span jhiTranslate="rcmHipsterApp.ipAccess.maxsessionduration">Maxsessionduration</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="maxupspeed"><span jhiTranslate="rcmHipsterApp.ipAccess.maxupspeed">Maxupspeed</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mehrfachzugang"><span jhiTranslate="rcmHipsterApp.ipAccess.mehrfachzugang">Mehrfachzugang</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="profileid"><span jhiTranslate="rcmHipsterApp.ipAccess.profileid">Profileid</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="rechtAufFesteIpadresse"><span jhiTranslate="rcmHipsterApp.ipAccess.rechtAufFesteIpadresse">Recht Auf Feste Ipadresse</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="toNr"><span jhiTranslate="rcmHipsterApp.ipAccess.toNr">To Nr</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="umtServiceDataOcssubscriptionid"><span jhiTranslate="rcmHipsterApp.ipAccess.umtServiceDataOcssubscriptionid">Umt Service Data Ocssubscriptionid</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="umtServiceDataThrottledownl3"><span jhiTranslate="rcmHipsterApp.ipAccess.umtServiceDataThrottledownl3">Umt Service Data Throttledownl 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="umtServiceDataThrottleprofile"><span jhiTranslate="rcmHipsterApp.ipAccess.umtServiceDataThrottleprofile">Umt Service Data Throttleprofile</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="umtServiceDataThrottleupl3"><span jhiTranslate="rcmHipsterApp.ipAccess.umtServiceDataThrottleupl3">Umt Service Data Throttleupl 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="usecase"><span jhiTranslate="rcmHipsterApp.ipAccess.usecase">Usecase</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="userauthenticationrequired"><span jhiTranslate="rcmHipsterApp.ipAccess.userauthenticationrequired">Userauthenticationrequired</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
             </thead>

@@ -1,6 +1,6 @@
 package com.dtit.tm.config.timezone;
 
-import com.dtit.tm.RcmDemoMsApp;
+import com.dtit.tm.RcmHipsterApp;
 import com.dtit.tm.repository.timezone.DateTimeWrapper;
 import com.dtit.tm.repository.timezone.DateTimeWrapperRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 /**
  * Integration tests for the ZoneId Hibernate configuration.
  */
-@SpringBootTest(classes = RcmDemoMsApp.class)
+@SpringBootTest(classes = RcmHipsterApp.class)
 public class HibernateTimeZoneIT {
 
     @Autowired

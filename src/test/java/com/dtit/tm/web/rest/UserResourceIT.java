@@ -1,6 +1,6 @@
 package com.dtit.tm.web.rest;
 
-import com.dtit.tm.RcmDemoMsApp;
+import com.dtit.tm.RcmHipsterApp;
 import com.dtit.tm.domain.Authority;
 import com.dtit.tm.domain.User;
 import com.dtit.tm.repository.UserRepository;
@@ -36,7 +36,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = RcmDemoMsApp.class)
+@SpringBootTest(classes = RcmHipsterApp.class)
 public class UserResourceIT {
 
     private static final String DEFAULT_LOGIN = "johndoe";

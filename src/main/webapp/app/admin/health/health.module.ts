@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { RcmDemoMsSharedModule } from 'app/shared/shared.module';
+import { RcmHipsterSharedModule } from 'app/shared/shared.module';
 
 import { HealthComponent } from './health.component';
 import { HealthModalComponent } from './health-modal.component';
@@ -8,7 +8,7 @@ import { HealthModalComponent } from './health-modal.component';
 import { healthRoute } from './health.route';
 
 @NgModule({
-  imports: [RcmDemoMsSharedModule, RouterModule.forChild([healthRoute])],
+  imports: [RcmHipsterSharedModule, RouterModule.forChild([healthRoute])],
   declarations: [HealthComponent, HealthModalComponent],
   entryComponents: [HealthModalComponent],
 })

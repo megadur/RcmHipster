@@ -1,6 +1,6 @@
 package com.dtit.tm.security;
 
-import com.dtit.tm.RcmDemoMsApp;
+import com.dtit.tm.RcmHipsterApp;
 import com.dtit.tm.domain.User;
 import com.dtit.tm.repository.UserRepository;
 
@@ -21,7 +21,7 @@ import static org.assertj.core.api.Assertions.assertThatExceptionOfType;
 /**
  * Integrations tests for {@link DomainUserDetailsService}.
  */
-@SpringBootTest(classes = RcmDemoMsApp.class)
+@SpringBootTest(classes = RcmHipsterApp.class)
 @Transactional
 public class DomainUserDetailsServiceIT {
 

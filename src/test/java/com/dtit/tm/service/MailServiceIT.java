@@ -2,7 +2,7 @@ package com.dtit.tm.service;
 
 import com.dtit.tm.config.Constants;
 
-import com.dtit.tm.RcmDemoMsApp;
+import com.dtit.tm.RcmHipsterApp;
 import com.dtit.tm.domain.User;
 import io.github.jhipster.config.JHipsterProperties;
 import org.junit.jupiter.api.BeforeEach;
@@ -40,7 +40,7 @@ import static org.mockito.Mockito.*;
 /**
  * Integration tests for {@link MailService}.
  */
-@SpringBootTest(classes = RcmDemoMsApp.class)
+@SpringBootTest(classes = RcmHipsterApp.class)
 public class MailServiceIT {
 
     private static final String[] languages = {

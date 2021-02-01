@@ -1,6 +1,6 @@
 package com.dtit.tm.adapter.idma;
 
-import com.dtit.tm.client.api.inventory.DefaultApi;
+import com.dtit.tm.adapter.idma.inventory.DefaultApi;
 
 public class InventoryAdapterConfig implements IInventoryAdapterConfig {
 
@@ -15,6 +15,6 @@ public class InventoryAdapterConfig implements IInventoryAdapterConfig {
         // TODO Auto-generated method stub
         return null;
     }
-    
+
 
 }

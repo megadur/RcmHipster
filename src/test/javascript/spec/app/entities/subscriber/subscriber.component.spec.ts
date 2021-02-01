@@ -3,7 +3,7 @@ import { of } from 'rxjs';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 
-import { RcmDemoMsTestModule } from '../../../test.module';
+import { RcmHipsterTestModule } from '../../../test.module';
 import { SubscriberComponent } from 'app/entities/subscriber/subscriber.component';
 import { SubscriberService } from 'app/entities/subscriber/subscriber.service';
 import { Subscriber } from 'app/shared/model/subscriber.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [RcmDemoMsTestModule],
+        imports: [RcmHipsterTestModule],
         declarations: [SubscriberComponent],
         providers: [
           {

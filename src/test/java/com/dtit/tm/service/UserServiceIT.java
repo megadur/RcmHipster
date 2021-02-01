@@ -1,6 +1,6 @@
 package com.dtit.tm.service;
 
-import com.dtit.tm.RcmDemoMsApp;
+import com.dtit.tm.RcmHipsterApp;
 import com.dtit.tm.config.Constants;
 import com.dtit.tm.domain.User;
 import com.dtit.tm.repository.UserRepository;
@@ -32,7 +32,7 @@ import static org.mockito.Mockito.when;
 /**
  * Integration tests for {@link UserService}.
  */
-@SpringBootTest(classes = RcmDemoMsApp.class)
+@SpringBootTest(classes = RcmHipsterApp.class)
 @Transactional
 public class UserServiceIT {
 

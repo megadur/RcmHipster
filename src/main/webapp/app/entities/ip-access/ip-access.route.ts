@@ -41,7 +41,7 @@ export const ipAccessRoute: Routes = [
     data: {
       authorities: [Authority.USER],
       defaultSort: 'id,asc',
-      pageTitle: 'rcmDemoMsApp.ipAccess.home.title',
+      pageTitle: 'rcmHipsterApp.ipAccess.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -53,7 +53,7 @@ export const ipAccessRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.ipAccess.home.title',
+      pageTitle: 'rcmHipsterApp.ipAccess.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -65,7 +65,7 @@ export const ipAccessRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.ipAccess.home.title',
+      pageTitle: 'rcmHipsterApp.ipAccess.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -77,7 +77,7 @@ export const ipAccessRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.ipAccess.home.title',
+      pageTitle: 'rcmHipsterApp.ipAccess.home.title',
     },
     canActivate: [UserRouteAccessService],
   },

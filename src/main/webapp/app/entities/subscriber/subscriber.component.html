@@ -1,10 +1,10 @@
 <div>
     <h2 id="page-heading">
-        <span jhiTranslate="rcmDemoMsApp.subscriber.home.title">Subscribers</span>
+        <span jhiTranslate="rcmHipsterApp.subscriber.home.title">Subscribers</span>
 
         <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-subscriber" [routerLink]="['/subscriber/new']">
             <fa-icon icon="plus"></fa-icon>
-            <span  jhiTranslate="rcmDemoMsApp.subscriber.home.createLabel">
+            <span  jhiTranslate="rcmHipsterApp.subscriber.home.createLabel">
             Create a new Subscriber
             </span>
         </button>
@@ -15,7 +15,7 @@
     <jhi-alert></jhi-alert>
 
     <div class="alert alert-warning" id="no-result" *ngIf="subscribers?.length === 0">
-        <span jhiTranslate="rcmDemoMsApp.subscriber.home.notFound">No subscribers found</span>
+        <span jhiTranslate="rcmHipsterApp.subscriber.home.notFound">No subscribers found</span>
     </div>
 
     <div class="table-responsive" id="entities" *ngIf="subscribers && subscribers.length > 0">
@@ -23,32 +23,32 @@
             <thead>
                 <tr jhiSort [(predicate)]="predicate" [(ascending)]="ascending" [callback]="reset.bind(this)">
                     <th scope="col"  jhiSortBy="id"><span jhiTranslate="global.field.id">ID</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="asskeng"><span jhiTranslate="rcmDemoMsApp.subscriber.asskeng">Asskeng</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="calid"><span jhiTranslate="rcmDemoMsApp.subscriber.calid">Calid</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="dnsProfile"><span jhiTranslate="rcmDemoMsApp.subscriber.dnsProfile">Dns Profile</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="errorelement"><span jhiTranslate="rcmDemoMsApp.subscriber.errorelement">Errorelement</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="errormessage"><span jhiTranslate="rcmDemoMsApp.subscriber.errormessage">Errormessage</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="errorvalue"><span jhiTranslate="rcmDemoMsApp.subscriber.errorvalue">Errorvalue</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="ipversion"><span jhiTranslate="rcmDemoMsApp.subscriber.ipversion">Ipversion</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="keyid"><span jhiTranslate="rcmDemoMsApp.subscriber.keyid">Keyid</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="maxDownL3"><span jhiTranslate="rcmDemoMsApp.subscriber.maxDownL3">Max Down L 3</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="maxSessionDuration"><span jhiTranslate="rcmDemoMsApp.subscriber.maxSessionDuration">Max Session Duration</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="maxUpL3"><span jhiTranslate="rcmDemoMsApp.subscriber.maxUpL3">Max Up L 3</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="mfzg"><span jhiTranslate="rcmDemoMsApp.subscriber.mfzg">Mfzg</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="netprofileid"><span jhiTranslate="rcmDemoMsApp.subscriber.netprofileid">Netprofileid</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="origin"><span jhiTranslate="rcmDemoMsApp.subscriber.origin">Origin</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="passwort"><span jhiTranslate="rcmDemoMsApp.subscriber.passwort">Passwort</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="passwortEnc"><span jhiTranslate="rcmDemoMsApp.subscriber.passwortEnc">Passwort Enc</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="policyGroup"><span jhiTranslate="rcmDemoMsApp.subscriber.policyGroup">Policy Group</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="profilset"><span jhiTranslate="rcmDemoMsApp.subscriber.profilset">Profilset</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="rc"><span jhiTranslate="rcmDemoMsApp.subscriber.rc">Rc</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="rectime"><span jhiTranslate="rcmDemoMsApp.subscriber.rectime">Rectime</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="requestID"><span jhiTranslate="rcmDemoMsApp.subscriber.requestID">Request ID</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="returnmessage"><span jhiTranslate="rcmDemoMsApp.subscriber.returnmessage">Returnmessage</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="rsptime"><span jhiTranslate="rcmDemoMsApp.subscriber.rsptime">Rsptime</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="tlnnr"><span jhiTranslate="rcmDemoMsApp.subscriber.tlnnr">Tlnnr</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="tlnsps"><span jhiTranslate="rcmDemoMsApp.subscriber.tlnsps">Tlnsps</span> <fa-icon icon="sort"></fa-icon></th>
-                    <th scope="col"  jhiSortBy="userAuthRequired"><span jhiTranslate="rcmDemoMsApp.subscriber.userAuthRequired">User Auth Required</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="asskeng"><span jhiTranslate="rcmHipsterApp.subscriber.asskeng">Asskeng</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="calid"><span jhiTranslate="rcmHipsterApp.subscriber.calid">Calid</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="dnsProfile"><span jhiTranslate="rcmHipsterApp.subscriber.dnsProfile">Dns Profile</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="errorelement"><span jhiTranslate="rcmHipsterApp.subscriber.errorelement">Errorelement</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="errormessage"><span jhiTranslate="rcmHipsterApp.subscriber.errormessage">Errormessage</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="errorvalue"><span jhiTranslate="rcmHipsterApp.subscriber.errorvalue">Errorvalue</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="ipversion"><span jhiTranslate="rcmHipsterApp.subscriber.ipversion">Ipversion</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="keyid"><span jhiTranslate="rcmHipsterApp.subscriber.keyid">Keyid</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="maxDownL3"><span jhiTranslate="rcmHipsterApp.subscriber.maxDownL3">Max Down L 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="maxSessionDuration"><span jhiTranslate="rcmHipsterApp.subscriber.maxSessionDuration">Max Session Duration</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="maxUpL3"><span jhiTranslate="rcmHipsterApp.subscriber.maxUpL3">Max Up L 3</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="mfzg"><span jhiTranslate="rcmHipsterApp.subscriber.mfzg">Mfzg</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="netprofileid"><span jhiTranslate="rcmHipsterApp.subscriber.netprofileid">Netprofileid</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="origin"><span jhiTranslate="rcmHipsterApp.subscriber.origin">Origin</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="passwort"><span jhiTranslate="rcmHipsterApp.subscriber.passwort">Passwort</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="passwortEnc"><span jhiTranslate="rcmHipsterApp.subscriber.passwortEnc">Passwort Enc</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="policyGroup"><span jhiTranslate="rcmHipsterApp.subscriber.policyGroup">Policy Group</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="profilset"><span jhiTranslate="rcmHipsterApp.subscriber.profilset">Profilset</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="rc"><span jhiTranslate="rcmHipsterApp.subscriber.rc">Rc</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="rectime"><span jhiTranslate="rcmHipsterApp.subscriber.rectime">Rectime</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="requestID"><span jhiTranslate="rcmHipsterApp.subscriber.requestID">Request ID</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="returnmessage"><span jhiTranslate="rcmHipsterApp.subscriber.returnmessage">Returnmessage</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="rsptime"><span jhiTranslate="rcmHipsterApp.subscriber.rsptime">Rsptime</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tlnnr"><span jhiTranslate="rcmHipsterApp.subscriber.tlnnr">Tlnnr</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="tlnsps"><span jhiTranslate="rcmHipsterApp.subscriber.tlnsps">Tlnsps</span> <fa-icon icon="sort"></fa-icon></th>
+                    <th scope="col"  jhiSortBy="userAuthRequired"><span jhiTranslate="rcmHipsterApp.subscriber.userAuthRequired">User Auth Required</span> <fa-icon icon="sort"></fa-icon></th>
                     <th scope="col"></th>
                 </tr>
             </thead>

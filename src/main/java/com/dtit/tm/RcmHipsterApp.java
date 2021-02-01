@@ -22,18 +22,18 @@ import java.util.Collection;
 
 @SpringBootApplication
 @EnableConfigurationProperties({LiquibaseProperties.class, ApplicationProperties.class})
-public class RcmDemoMsApp {
+public class RcmHipsterApp {
 
-    private static final Logger log = LoggerFactory.getLogger(RcmDemoMsApp.class);
+    private static final Logger log = LoggerFactory.getLogger(RcmHipsterApp.class);
 
     private final Environment env;
 
-    public RcmDemoMsApp(Environment env) {
+    public RcmHipsterApp(Environment env) {
         this.env = env;
     }
 
     /**
-     * Initializes RcmDemoMs.
+     * Initializes RcmHipster.
      * <p>
      * Spring profiles can be configured with a program argument --spring.profiles.active=your-active-profile
      * <p>
@@ -58,7 +58,7 @@ public class RcmDemoMsApp {
      * @param args the command line arguments.
      */
     public static void main(String[] args) {
-        SpringApplication app = new SpringApplication(RcmDemoMsApp.class);
+        SpringApplication app = new SpringApplication(RcmHipsterApp.class);
         DefaultProfileUtil.addDefaultProfile(app);
         Environment env = app.run(args).getEnvironment();
         logApplicationStartup(env);

@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute } from '@angular/router';
 import { of } from 'rxjs';
 
-import { RcmDemoMsTestModule } from '../../../test.module';
+import { RcmHipsterTestModule } from '../../../test.module';
 import { CredentialsDetailComponent } from 'app/entities/credentials/credentials-detail.component';
 import { Credentials } from 'app/shared/model/credentials.model';
 
@@ -14,7 +14,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [RcmDemoMsTestModule],
+        imports: [RcmHipsterTestModule],
         declarations: [CredentialsDetailComponent],
         providers: [{ provide: ActivatedRoute, useValue: route }],
       })

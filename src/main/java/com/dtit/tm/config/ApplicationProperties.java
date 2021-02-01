@@ -3,7 +3,7 @@ package com.dtit.tm.config;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Properties specific to Rcm Demo Ms.
+ * Properties specific to Rcm Hipster.
  * <p>
  * Properties are configured in the {@code application.yml} file.
  * See {@link io.github.jhipster.config.JHipsterProperties} for a good example.

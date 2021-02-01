@@ -1,6 +1,6 @@
 package com.dtit.tm.web.rest;
 
-import com.dtit.tm.RcmDemoMsApp;
+import com.dtit.tm.RcmHipsterApp;
 import com.dtit.tm.domain.PersistentAuditEvent;
 import com.dtit.tm.repository.PersistenceAuditEventRepository;
 import com.dtit.tm.security.AuthoritiesConstants;
@@ -30,7 +30,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
  */
 @AutoConfigureMockMvc
 @WithMockUser(authorities = AuthoritiesConstants.ADMIN)
-@SpringBootTest(classes = RcmDemoMsApp.class)
+@SpringBootTest(classes = RcmHipsterApp.class)
 @Transactional
 public class AuditResourceIT {
 

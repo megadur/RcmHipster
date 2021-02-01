@@ -3,7 +3,7 @@ import { HttpResponse } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { of } from 'rxjs';
 
-import { RcmDemoMsTestModule } from '../../../test.module';
+import { RcmHipsterTestModule } from '../../../test.module';
 import { IpAccessUpdateComponent } from 'app/entities/ip-access/ip-access-update.component';
 import { IpAccessService } from 'app/entities/ip-access/ip-access.service';
 import { IpAccess } from 'app/shared/model/ip-access.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [RcmDemoMsTestModule],
+        imports: [RcmHipsterTestModule],
         declarations: [IpAccessUpdateComponent],
         providers: [FormBuilder],
       })

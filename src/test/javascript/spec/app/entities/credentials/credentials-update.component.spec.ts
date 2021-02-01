@@ -3,7 +3,7 @@ import { HttpResponse } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { of } from 'rxjs';
 
-import { RcmDemoMsTestModule } from '../../../test.module';
+import { RcmHipsterTestModule } from '../../../test.module';
 import { CredentialsUpdateComponent } from 'app/entities/credentials/credentials-update.component';
 import { CredentialsService } from 'app/entities/credentials/credentials.service';
 import { Credentials } from 'app/shared/model/credentials.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [RcmDemoMsTestModule],
+        imports: [RcmHipsterTestModule],
         declarations: [CredentialsUpdateComponent],
         providers: [FormBuilder],
       })

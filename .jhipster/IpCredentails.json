@@ -7,7 +7,7 @@
     }
   ],
   "relationships": [],
-  "changelogDate": "20210131182750",
+  "changelogDate": "20210201155625",
   "entityTableName": "ip_credentails",
   "dto": "mapstruct",
   "pagination": "no",

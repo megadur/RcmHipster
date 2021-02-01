@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rcm-demo-ms": {
+    "rcm-hipster": {
       "root": "",
       "sourceRoot": "src/main/webapp",
       "projectType": "application",
@@ -29,7 +29,7 @@
       "architect": {}
     }
   },
-  "defaultProject": "rcm-demo-ms",
+  "defaultProject": "rcm-hipster",
   "cli": {
     "packageManager": "npm"
   }

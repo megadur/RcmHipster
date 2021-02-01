@@ -40,7 +40,7 @@ export const credentialsRoute: Routes = [
     component: CredentialsComponent,
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.credentials.home.title',
+      pageTitle: 'rcmHipsterApp.credentials.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -52,7 +52,7 @@ export const credentialsRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.credentials.home.title',
+      pageTitle: 'rcmHipsterApp.credentials.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -64,7 +64,7 @@ export const credentialsRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.credentials.home.title',
+      pageTitle: 'rcmHipsterApp.credentials.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -76,7 +76,7 @@ export const credentialsRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.credentials.home.title',
+      pageTitle: 'rcmHipsterApp.credentials.home.title',
     },
     canActivate: [UserRouteAccessService],
   },

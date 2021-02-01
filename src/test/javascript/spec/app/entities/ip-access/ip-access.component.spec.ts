@@ -3,7 +3,7 @@ import { of } from 'rxjs';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 
-import { RcmDemoMsTestModule } from '../../../test.module';
+import { RcmHipsterTestModule } from '../../../test.module';
 import { IpAccessComponent } from 'app/entities/ip-access/ip-access.component';
 import { IpAccessService } from 'app/entities/ip-access/ip-access.service';
 import { IpAccess } from 'app/shared/model/ip-access.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [RcmDemoMsTestModule],
+        imports: [RcmHipsterTestModule],
         declarations: [IpAccessComponent],
         providers: [
           {

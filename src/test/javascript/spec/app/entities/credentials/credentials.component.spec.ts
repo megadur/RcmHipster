@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 
-import { RcmDemoMsTestModule } from '../../../test.module';
+import { RcmHipsterTestModule } from '../../../test.module';
 import { CredentialsComponent } from 'app/entities/credentials/credentials.component';
 import { CredentialsService } from 'app/entities/credentials/credentials.service';
 import { Credentials } from 'app/shared/model/credentials.model';
@@ -15,7 +15,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [RcmDemoMsTestModule],
+        imports: [RcmHipsterTestModule],
         declarations: [CredentialsComponent],
       })
         .overrideTemplate(CredentialsComponent, '')

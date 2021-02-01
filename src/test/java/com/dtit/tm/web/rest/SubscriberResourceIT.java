@@ -1,6 +1,6 @@
 package com.dtit.tm.web.rest;
 
-import com.dtit.tm.RcmDemoMsApp;
+import com.dtit.tm.RcmHipsterApp;
 import com.dtit.tm.domain.Subscriber;
 import com.dtit.tm.repository.SubscriberRepository;
 import com.dtit.tm.service.SubscriberService;
@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link SubscriberResource} REST controller.
  */
-@SpringBootTest(classes = RcmDemoMsApp.class)
+@SpringBootTest(classes = RcmHipsterApp.class)
 @AutoConfigureMockMvc
 @WithMockUser
 public class SubscriberResourceIT {

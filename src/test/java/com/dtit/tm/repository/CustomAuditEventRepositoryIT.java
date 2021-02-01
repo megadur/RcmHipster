@@ -1,6 +1,6 @@
 package com.dtit.tm.repository;
 
-import com.dtit.tm.RcmDemoMsApp;
+import com.dtit.tm.RcmHipsterApp;
 
 import com.dtit.tm.config.Constants;
 import com.dtit.tm.config.audit.AuditEventConverter;
@@ -28,7 +28,7 @@ import static com.dtit.tm.repository.CustomAuditEventRepository.EVENT_DATA_COLUM
 /**
  * Integration tests for {@link CustomAuditEventRepository}.
  */
-@SpringBootTest(classes = RcmDemoMsApp.class)
+@SpringBootTest(classes = RcmHipsterApp.class)
 @Transactional
 public class CustomAuditEventRepositoryIT {
 

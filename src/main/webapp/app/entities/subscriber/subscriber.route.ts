@@ -40,7 +40,7 @@ export const subscriberRoute: Routes = [
     component: SubscriberComponent,
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.subscriber.home.title',
+      pageTitle: 'rcmHipsterApp.subscriber.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -52,7 +52,7 @@ export const subscriberRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.subscriber.home.title',
+      pageTitle: 'rcmHipsterApp.subscriber.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -64,7 +64,7 @@ export const subscriberRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.subscriber.home.title',
+      pageTitle: 'rcmHipsterApp.subscriber.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -76,7 +76,7 @@ export const subscriberRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.subscriber.home.title',
+      pageTitle: 'rcmHipsterApp.subscriber.home.title',
     },
     canActivate: [UserRouteAccessService],
   },

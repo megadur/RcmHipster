@@ -1,6 +1,6 @@
 {
   "global": {
-    "title": "RcmDemoMs",
+    "title": "RcmHipster",
     "browsehappy": "Ваш браузер <strong>устарел</strong>. Пожалуйста <a href=\"http://browsehappy.com/?locale=ru\">обновите ваш браузер</a>.",
     "menu": {
       "home": "Главная",
@@ -9,9 +9,9 @@
         "main": "Сущности",
         "ipAccess": "Ip Access",
         "subscriber": "Subscriber",
+        "ipCredentails": "Ip Credentails",
         "line": "Line",
         "credentials": "Credentials",
-        "ipCredentails": "Ip Credentails",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

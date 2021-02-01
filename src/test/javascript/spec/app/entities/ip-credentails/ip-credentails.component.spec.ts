@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { of } from 'rxjs';
 import { HttpHeaders, HttpResponse } from '@angular/common/http';
 
-import { RcmDemoMsTestModule } from '../../../test.module';
+import { RcmHipsterTestModule } from '../../../test.module';
 import { IpCredentailsComponent } from 'app/entities/ip-credentails/ip-credentails.component';
 import { IpCredentailsService } from 'app/entities/ip-credentails/ip-credentails.service';
 import { IpCredentails } from 'app/shared/model/ip-credentails.model';
@@ -15,7 +15,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [RcmDemoMsTestModule],
+        imports: [RcmHipsterTestModule],
         declarations: [IpCredentailsComponent],
       })
         .overrideTemplate(IpCredentailsComponent, '')

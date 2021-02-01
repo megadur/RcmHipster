@@ -1,10 +1,10 @@
 <div>
     <h2 id="page-heading">
-        <span jhiTranslate="rcmDemoMsApp.ipCredentails.home.title">Ip Credentails</span>
+        <span jhiTranslate="rcmHipsterApp.ipCredentails.home.title">Ip Credentails</span>
 
         <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-ip-credentails" [routerLink]="['/ip-credentails/new']">
             <fa-icon icon="plus"></fa-icon>
-            <span  jhiTranslate="rcmDemoMsApp.ipCredentails.home.createLabel">
+            <span  jhiTranslate="rcmHipsterApp.ipCredentails.home.createLabel">
             Create a new Ip Credentails
             </span>
         </button>
@@ -15,7 +15,7 @@
     <jhi-alert></jhi-alert>
 
     <div class="alert alert-warning" id="no-result" *ngIf="ipCredentails?.length === 0">
-        <span jhiTranslate="rcmDemoMsApp.ipCredentails.home.notFound">No ipCredentails found</span>
+        <span jhiTranslate="rcmHipsterApp.ipCredentails.home.notFound">No ipCredentails found</span>
     </div>
 
     <div class="table-responsive" id="entities" *ngIf="ipCredentails && ipCredentails.length > 0">
@@ -23,7 +23,7 @@
             <thead>
                 <tr>
                     <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
-                    <th scope="col" ><span jhiTranslate="rcmDemoMsApp.ipCredentails.toNr">To Nr</span></th>
+                    <th scope="col" ><span jhiTranslate="rcmHipsterApp.ipCredentails.toNr">To Nr</span></th>
                     <th scope="col"></th>
                 </tr>
             </thead>

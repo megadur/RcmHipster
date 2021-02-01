@@ -59,7 +59,7 @@ management:
 
 spring:
   application:
-    name: RcmDemoMs
+    name: RcmHipster
   profiles:
     # The commented value for `active` can be replaced with valid Spring profiles to load.
     # Otherwise, it will be filled in by maven when building the JAR file
@@ -97,13 +97,13 @@ spring:
     allow-bean-definition-overriding: true
   task:
     execution:
-      thread-name-prefix: rcm-demo-ms-task-
+      thread-name-prefix: rcm-hipster-task-
       pool:
         core-size: 2
         max-size: 50
         queue-capacity: 10000
     scheduling:
-      thread-name-prefix: rcm-demo-ms-scheduling-
+      thread-name-prefix: rcm-hipster-scheduling-
       pool:
         size: 2
   thymeleaf:
@@ -131,7 +131,7 @@ info:
 
 jhipster:
   clientApp:
-    name: 'rcmDemoMsApp'
+    name: 'rcmHipsterApp'
   # By default CORS is disabled. Uncomment to enable.
   # cors:
   #     allowed-origins: "*"
@@ -141,11 +141,11 @@ jhipster:
   #     allow-credentials: true
   #     max-age: 1800
   mail:
-    from: RcmDemoMs@localhost
+    from: RcmHipster@localhost
   swagger:
     default-include-pattern: /api/.*
-    title: RcmDemoMs API
-    description: RcmDemoMs API documentation
+    title: RcmHipster API
+    description: RcmHipster API documentation
     version: 0.0.1
     terms-of-service-url:
     contact-name:

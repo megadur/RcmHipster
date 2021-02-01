@@ -1,6 +1,6 @@
 package com.dtit.tm.web.rest;
 
-import com.dtit.tm.RcmDemoMsApp;
+import com.dtit.tm.RcmHipsterApp;
 import com.dtit.tm.domain.IpCredentails;
 import com.dtit.tm.repository.IpCredentailsRepository;
 import com.dtit.tm.service.IpCredentailsService;
@@ -27,7 +27,7 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 /**
  * Integration tests for the {@link IpCredentailsResource} REST controller.
  */
-@SpringBootTest(classes = RcmDemoMsApp.class)
+@SpringBootTest(classes = RcmHipsterApp.class)
 @AutoConfigureMockMvc
 @WithMockUser
 public class IpCredentailsResourceIT {

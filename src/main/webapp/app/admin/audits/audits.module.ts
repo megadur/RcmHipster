@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { RcmDemoMsSharedModule } from 'app/shared/shared.module';
+import { RcmHipsterSharedModule } from 'app/shared/shared.module';
 
 import { AuditsComponent } from './audits.component';
 
 import { auditsRoute } from './audits.route';
 
 @NgModule({
-  imports: [RcmDemoMsSharedModule, RouterModule.forChild([auditsRoute])],
+  imports: [RcmHipsterSharedModule, RouterModule.forChild([auditsRoute])],
   declarations: [AuditsComponent],
 })
 export class AuditsModule {}

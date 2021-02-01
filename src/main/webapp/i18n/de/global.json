@@ -1,6 +1,6 @@
 {
   "global": {
-    "title": "RcmDemoMs",
+    "title": "RcmHipster",
     "browsehappy": "Sie benutzen einen <strong>veralteten</strong> Browser. Bitte <a href=\"http://browsehappy.com/?locale=de/\">aktualisieren Sie Ihren Browser</a>, um die Benutzerfreundlichkeit zu erhöhen.",
     "menu": {
       "home": "Startseite",
@@ -9,9 +9,9 @@
         "main": "Entitäten",
         "ipAccess": "Ip Access",
         "subscriber": "Subscriber",
+        "ipCredentails": "Ip Credentails",
         "line": "Line",
         "credentials": "Credentials",
-        "ipCredentails": "Ip Credentails",
         "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
       },
       "account": {

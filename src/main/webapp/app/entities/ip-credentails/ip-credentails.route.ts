@@ -40,7 +40,7 @@ export const ipCredentailsRoute: Routes = [
     component: IpCredentailsComponent,
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.ipCredentails.home.title',
+      pageTitle: 'rcmHipsterApp.ipCredentails.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -52,7 +52,7 @@ export const ipCredentailsRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.ipCredentails.home.title',
+      pageTitle: 'rcmHipsterApp.ipCredentails.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -64,7 +64,7 @@ export const ipCredentailsRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.ipCredentails.home.title',
+      pageTitle: 'rcmHipsterApp.ipCredentails.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -76,7 +76,7 @@ export const ipCredentailsRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.ipCredentails.home.title',
+      pageTitle: 'rcmHipsterApp.ipCredentails.home.title',
     },
     canActivate: [UserRouteAccessService],
   },

@@ -1,6 +1,6 @@
 package com.dtit.tm.adapter.rdq;
 
-import com.dtit.tm.client.api.rdq.SubscriberApi;
+import com.dtit.tm.adapter.rdq.subscriber.SubscriberApi;
 
 public class RdqAdapterConfig implements IRdqAdapterConfig {
 
@@ -15,5 +15,5 @@ public class RdqAdapterConfig implements IRdqAdapterConfig {
         // TODO Auto-generated method stub
         return null;
     }
-    
+
 }

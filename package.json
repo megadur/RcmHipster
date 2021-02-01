@@ -1,7 +1,7 @@
 {
-  "name": "rcm-demo-ms",
+  "name": "rcm-hipster",
   "version": "0.0.1-SNAPSHOT",
-  "description": "Description for RcmDemoMs",
+  "description": "Description for RcmHipster",
   "private": true,
   "license": "UNLICENSED",
   "cacheDirectories": [

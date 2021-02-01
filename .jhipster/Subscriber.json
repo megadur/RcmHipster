@@ -107,7 +107,7 @@
     }
   ],
   "relationships": [],
-  "changelogDate": "20210131133513",
+  "changelogDate": "20210201142441",
   "entityTableName": "subscriber",
   "dto": "mapstruct",
   "pagination": "infinite-scroll",

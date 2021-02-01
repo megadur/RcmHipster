@@ -3,7 +3,7 @@ import { HttpResponse } from '@angular/common/http';
 import { FormBuilder } from '@angular/forms';
 import { of } from 'rxjs';
 
-import { RcmDemoMsTestModule } from '../../../test.module';
+import { RcmHipsterTestModule } from '../../../test.module';
 import { IpCredentailsUpdateComponent } from 'app/entities/ip-credentails/ip-credentails-update.component';
 import { IpCredentailsService } from 'app/entities/ip-credentails/ip-credentails.service';
 import { IpCredentails } from 'app/shared/model/ip-credentails.model';
@@ -16,7 +16,7 @@ describe('Component Tests', () => {
 
     beforeEach(() => {
       TestBed.configureTestingModule({
-        imports: [RcmDemoMsTestModule],
+        imports: [RcmHipsterTestModule],
         declarations: [IpCredentailsUpdateComponent],
         providers: [FormBuilder],
       })

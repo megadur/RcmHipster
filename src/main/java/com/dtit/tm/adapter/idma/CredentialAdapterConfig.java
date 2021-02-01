@@ -1,9 +1,11 @@
 package com.dtit.tm.adapter.idma;
 
+import com.dtit.tm.adapter.idma.credentials.DefaultApi;
+
 public class CredentialAdapterConfig implements ICredentialAdapterConfig {
 
     @Override
-    public com.dtit.tm.client.api.credentials.DefaultApi idmaCredetialClientApi() {
+    public DefaultApi idmaCredetialClientApi() {
         // TODO Auto-generated method stub
         return null;
     }
@@ -13,6 +15,6 @@ public class CredentialAdapterConfig implements ICredentialAdapterConfig {
         // TODO Auto-generated method stub
         return null;
     }
-    
+
 
 }

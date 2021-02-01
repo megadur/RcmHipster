@@ -1,10 +1,10 @@
 <div>
     <h2 id="page-heading">
-        <span jhiTranslate="rcmDemoMsApp.line.home.title">Lines</span>
+        <span jhiTranslate="rcmHipsterApp.line.home.title">Lines</span>
 
         <button id="jh-create-entity" class="btn btn-primary float-right jh-create-entity create-line" [routerLink]="['/line/new']">
             <fa-icon icon="plus"></fa-icon>
-            <span  jhiTranslate="rcmDemoMsApp.line.home.createLabel">
+            <span  jhiTranslate="rcmHipsterApp.line.home.createLabel">
             Create a new Line
             </span>
         </button>
@@ -15,7 +15,7 @@
     <jhi-alert></jhi-alert>
 
     <div class="alert alert-warning" id="no-result" *ngIf="lines?.length === 0">
-        <span jhiTranslate="rcmDemoMsApp.line.home.notFound">No lines found</span>
+        <span jhiTranslate="rcmHipsterApp.line.home.notFound">No lines found</span>
     </div>
 
     <div class="table-responsive" id="entities" *ngIf="lines && lines.length > 0">
@@ -23,7 +23,7 @@
             <thead>
                 <tr>
                     <th scope="col" ><span jhiTranslate="global.field.id">ID</span></th>
-                    <th scope="col" ><span jhiTranslate="rcmDemoMsApp.line.uar">Uar</span></th>
+                    <th scope="col" ><span jhiTranslate="rcmHipsterApp.line.uar">Uar</span></th>
                     <th scope="col"></th>
                 </tr>
             </thead>

@@ -40,7 +40,7 @@ export const lineRoute: Routes = [
     component: LineComponent,
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.line.home.title',
+      pageTitle: 'rcmHipsterApp.line.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -52,7 +52,7 @@ export const lineRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.line.home.title',
+      pageTitle: 'rcmHipsterApp.line.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -64,7 +64,7 @@ export const lineRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.line.home.title',
+      pageTitle: 'rcmHipsterApp.line.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
@@ -76,7 +76,7 @@ export const lineRoute: Routes = [
     },
     data: {
       authorities: [Authority.USER],
-      pageTitle: 'rcmDemoMsApp.line.home.title',
+      pageTitle: 'rcmHipsterApp.line.home.title',
     },
     canActivate: [UserRouteAccessService],
   },
