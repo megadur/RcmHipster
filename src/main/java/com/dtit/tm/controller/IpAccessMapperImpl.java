@@ -1,9 +1,10 @@
-package com.dtit.tm.service.mapper;
+package com.dtit.tm.controller;
 
 import java.util.List;
 
 import com.dtit.tm.domain.IpAccess;
 import com.dtit.tm.service.dto.IpAccessDTO;
+import com.dtit.tm.service.mapper.IpAccessMapper;
 
 public class IpAccessMapperImpl implements IpAccessMapper {
 

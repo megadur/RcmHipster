@@ -129,6 +129,9 @@
                                         <packagename>com.dtit.tm.adapter.rdq.subscriber</packagename>
                                     </xsdOption>
                                 </xsdOptions>
+                                <sources>
+                                    <source>${project.build.directory}/generated-sources/rdq/src/main/java/</source>
+                                </sources>
                             </configuration>
                         </execution>
                     </executions>
@@ -149,8 +152,8 @@
                             <configuration>
                                 <inputSpec>${project.basedir}/src/main/resources/api/problem/api.yml</inputSpec>
                                 <generatorName>spring</generatorName>
-                                <apiPackage>com.dtit.tm.web.api.problem</apiPackage>
-                                <modelPackage>com.dtit.tm.web.api.problem.model</modelPackage>
+                                <apiPackage>com.dtit.tm.controller.problem</apiPackage>
+                                <modelPackage>com.dtit.tm.controller.problem.model</modelPackage>
                                 <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
                                 <importMappings>Problem=org.zalando.problem.Problem</importMappings>
                                 <skipValidateSpec>false</skipValidateSpec>
@@ -158,9 +161,12 @@
                                     <delegatePattern>true</delegatePattern>
                                     <title>rcm-demo-ms</title>
                                 </configOptions>
+                                <sources>
+                                    <source>${project.build.directory}/generated-sources/openapi/src/main/java/</source>
+                                </sources>
                             </configuration>
                         </execution>
-                        <!--C:\data\src\jhipster\RcmHipster\Order\src\main\resources\swagger\tmagic\order\callback\v2\TMF640_callback.json-->
+                        <!--TMF640_callback.json-->
                         <execution>
                             <id>generate-sources-TMF640_server</id>
                             <goals>
@@ -170,8 +176,8 @@
                                 <additionalJvmArgs>-Dlogback.configurationFile=${project.basedir}/src/test/resources/logback-codegen.xml</additionalJvmArgs>
                                 <inputSpec>${project.basedir}/src/main/resources/api/tmagic/order/v1/TMF640_swagger.json</inputSpec>
                                 <generatorName>spring</generatorName>
-                                <apiPackage>com.dtit.tm.web.api.order</apiPackage>
-                                <modelPackage>com.dtit.tm.web.api.order.model</modelPackage>
+                                <apiPackage>com.dtit.tm.controller.order</apiPackage>
+                                <modelPackage>com.dtit.tm.controller.order.model</modelPackage>
                                 <supportingFilesToGenerate>ApiUtil.java</supportingFilesToGenerate>
                                 <skipValidateSpec>false</skipValidateSpec>
                                 <configOptions>
@@ -183,9 +189,12 @@
                                 <generateModels>true</generateModels>
                                 <generateApis>true</generateApis>
                                 <generateModelTests>true</generateModelTests>
+                                <sources>
+                                    <source>${project.build.directory}/generated-sources/openapi/src/main/java/</source>
+                                </sources>
                             </configuration>
                         </execution>
-                        <!--C:\data\src\jhipster\RcmHipster\Order\src\main\resources\api\tmagic\order\callback\v2\TMF640_callback.json-->
+                        <!--TMF640_callback.json-->
                         <execution>
                             <id>generate-sources-TMF640_client</id>
                             <goals>
@@ -198,6 +207,9 @@
                                 <apiPackage>com.dtit.tm.adapter.doss.order</apiPackage>
                                 <modelPackage>com.dtit.tm.adapter.doss.order.model</modelPackage>
                                 <invokerPackage>com.dtit.tm.adapter.doss.order.invoker</invokerPackage>
+                                <sources>
+                                    <source>${project.build.directory}/generated-sources/openapi/src/main/java/</source>
+                                </sources>
                             </configuration>
                         </execution>
                         <execution>
@@ -212,6 +224,9 @@
                                 <apiPackage>com.dtit.tm.adapter.idma.credentials</apiPackage>
                                 <modelPackage>com.dtit.tm.adapter.idma.credentials.model</modelPackage>
                                 <invokerPackage>com.dtit.tm.adapter.idma.credentials.invoker</invokerPackage>
+                                <sources>
+                                    <source>${project.build.directory}/generated-sources/openapi/src/main/java/</source>
+                                </sources>
                             </configuration>
                         </execution>
                         <execution>
@@ -226,6 +241,9 @@
                                 <apiPackage>com.dtit.tm.adapter.idma.inventory</apiPackage>
                                 <modelPackage>com.dtit.tm.adapter.idma.inventory.model</modelPackage>
                                 <invokerPackage>com.dtit.tm.adapter.idma.inventory.invoker</invokerPackage>
+                                <sources>
+                                    <source>${project.build.directory}/generated-sources/openapi/src/main/java/</source>
+                                </sources>
                             </configuration>
                         </execution>
                         <execution>
@@ -240,12 +258,13 @@
                                 <apiPackage>com.dtit.tm.adapter.rdq.subscriber</apiPackage>
                                 <modelPackage>com.dtit.tm.adapter.rdq.subscriber.model</modelPackage>
                                 <invokerPackage>com.dtit.tm.adapter.rdq.subscriber.invoker</invokerPackage>
+                                <sources>
+                                    <source>${project.build.directory}/generated-sources/openapi/src/main/java/</source>
+                                </sources>
                             </configuration>
                         </execution>
                     </executions>
-
                 </plugin>
-
             </plugins>
         </pluginManagement>
     </build>

@@ -15,7 +15,7 @@ public class OrderService {
 
     private final Logger log = LoggerFactory.getLogger(OrderService.class);
 
-    public void process(IpAccessDTO iad) {
+    public Boolean process(IpAccessDTO iad) {
         throw new NotImplementedException("TODO");
     }
 
